@@ -100,43 +100,6 @@
     <div class="hero-overlay"></div>
   </section>
 
-<style>
-@keyframes flash {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
-/* Mobile responsive banner - BETWEEN HEADER AND HERO */
-@media (max-width: 768px) {
-  .promo-banner {
-    position: relative !important;    /* Changed from fixed */
-    top: auto !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: auto !important;
-    transform: none !important;
-    max-width: 90% !important;
-    margin: 10px auto !important;     /* Center it with margin */
-    padding: 10px 15px !important;
-    border-radius: 12px !important;
-    z-index: 10 !important;
-  }
-  .promo-banner h2 {
-    font-size: 0.75rem !important;
-    line-height: 1.2 !important;
-    margin: 0 !important;
-  }
-  .promo-banner h2 span:first-child {
-    font-size: 0.75rem !important;
-  }
-  .promo-banner h2 span:last-child {
-    font-size: 0.65rem !important;
-    display: block !important;
-    margin-top: 2px !important;
-  }
-}
-</style>
-
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
@@ -153,11 +116,12 @@
                     <p>Advanced security measures and access control</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🚫</div>
-                    <h3>Mouse Proof Facility</h3>
-                    <p>Clean, smoke-free environment for all units</p>
-                </div>
-            </div>
+    <div class="feature-icon" style="background: none; border: none; padding: 0;">
+        <img src="pictures/mouse-proof.png" alt="Mouse Proof" style="width: 150px; height: auto; display: block; margin: 0 auto;">
+    </div>
+    <h3>Mouse Proof Facility</h3>
+    <p>Clean, smoke-free environment for all units</p>
+</div>
         </div>
     </section>
 
@@ -167,28 +131,28 @@
             <h2 class="section-title">Our Facilities</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="storage-unit-exterior.jpg" alt="Storage Units">
+                    <img src="pictures/storage-unit-exterior.jpg" alt="Storage Units">
                     <div class="gallery-overlay">
                         <h3>Modern Storage Units</h3>
                         <p>Clean, secure, and accessible</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="storage-hallway.jpg" alt="Interior Hallway">
+                    <img src="pictures/storage-hallway.jpg" alt="Interior Hallway">
                     <div class="gallery-overlay">
                         <h3>Well-Lit Interiors</h3>
                         <p>Easy access to your unit</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="moving-trucks.jpg" alt="Moving Trucks">
+                    <img src="pictures/moving-trucks.jpg" alt="Moving Trucks">
                     <div class="gallery-overlay">
                         <h3>Moving Assistance</h3>
                         <p>Trucks available for rent</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="containers.jpg" alt="Containers">
+                    <img src="pictures/containers.jpg" alt="Containers">
                     <div class="gallery-overlay">
                         <h3>Container Options</h3>
                         <p>Various sizes available</p>
