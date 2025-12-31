@@ -15,7 +15,14 @@
                 <a href="index.html">
                      <img src="pictures/fortknoxlogo.webp" alt="Fort Knox Self Storage" class="logo" style="height: 290px; width: auto; position: absolute; top: 10px; left: 150px; z-index: 100;">
                 </a>
-                <nav class="nav">
+
+                <!-- Hamburger Menu Button (only visible on mobile) -->
+              <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+                <nav class="nav" id="nav">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>                    
                     <a href="container-sales.html">Container Sales</a>   
@@ -299,5 +306,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('nav');
+  
+  menuToggle.addEventListener('click', function() {
+    nav.classList.toggle('active');
+    this.classList.toggle('active');
+  });
+  
+  // Close menu when clicking a link
+  const navLinks = nav.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+      menuToggle.classList.remove('active');
+    });
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const isClickInsideNav = nav.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      menuToggle.classList.remove('active');
+    }
+  });
+</script>
 </body>
 </html>
