@@ -1729,3 +1729,53 @@ a {
 .hero-cta {
   gap: 5px !important;  /* Reduced from 20px */
 }
+
+/* ===================================
+ FIX LOCATION SECTION ON MOBILE
+ =================================== */
+@media (max-width: 768px) {
+  .location {
+    padding: 40px 0 !important;
+    overflow-x: hidden !important;
+  }
+  
+  .location .container {
+    padding: 0 25px !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+  
+  .location-content {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .location-info {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+  
+  .location-info h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+  }
+  
+  .location-address {
+    font-size: 1rem !important;
+    padding: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .hours {
+    padding: 20px !important;
+    margin: 0 0 20px 0 !important;
+    width: 100% !important;
+  }
+  
+  .location-map iframe {
+    width: 100% !important;
+    height: 300px !important;
+  }
+}
