@@ -229,16 +229,17 @@ a {
  BUTTONS - Carved Wood Style
  =================================== */
 .btn {
- display: inline-flex;
- align-items: center;
- gap: 10px;
- padding: 18px 45px;
- font-family: 'Georgia', serif;
- font-weight: 700;
- font-size: 1.15rem;
- border: 4px solid var(--metal-dark);
- cursor: pointer;
- transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 45px;
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border: 4px solid var(--metal-dark);
+  border-radius: 50px;  /* ADD THIS LINE */
+  cursor: pointer;
+  transition: all 0.3s ease;
  box-shadow: 
  0 5px 0 rgba(0, 0, 0, 0.4),
  0 8px 25px rgba(0, 0, 0, 0.4);
@@ -255,6 +256,7 @@ a {
  right: -4px;
  bottom: -4px;
  border: 3px solid rgba(0, 0, 0, 0.3);
+ border-radius: 55px;  /* ADD THIS LINE - slightly larger than button's 50px */
  pointer-events: none;
 }
 
@@ -851,8 +853,14 @@ a {
  display: none;
  }
  
+ /* REDUCE HERO SECTION SPACING ON MOBILE */
+ .hero {
+ padding: 60px 0 40px !important;  /* Reduced from 120px 0 80px */
+ }
+ 
  .hero-title {
  font-size: 2.5rem;
+ margin-bottom: 10px !important;  /* Reduced spacing */
  }
  
  .hero-subtitle {
@@ -935,25 +943,17 @@ a {
 .gallery-grid > *:nth-child(3) { animation-delay: 0.3s; }
 .gallery-grid > *:nth-child(4) { animation-delay: 0.4s; }
 
-/* Active navigation link styling */
-.nav a.active {
- background-color: #633c30;
- color: white;
- font-weight: 700;
-}
-
-/* Or if you prefer an underline style */
-.nav a.active {
- border-bottom: 3px solid #2c0f06;
- color: #e9bdb0;
- font-weight: 700;
-}
-
 /* Logo styling */
 .logo {
- height: 200px;  /* Make it bigger - adjust this number as needed */
- width: auto;
- margin-left: auto;  /* Pushes it to the left */
+  height: 290px;
+  width: auto;
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  z-index: 100;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.6));
 }
 
 /* Adjust header to accommodate larger logo */
@@ -1214,50 +1214,6 @@ a {
 }
 
 /* ===================================
- MOBILE RESPONSIVE LOGO
- =================================== */
-@media (max-width: 768px) {
- .logo {
- left: 20px !important;
- top: 10px !important;
- height: 90px !important;  /* Increased from 70px */
- }
-}
-
-@media (max-width: 480px) {
- .logo {
- left: 50px !important;
- top: 5px !important;
- height: 90px !important;  /* Increased from 60px */
- }
-}
-
-/* ===================================
- PROMOTIONAL BANNER
- =================================== */
-.promo-banner,
-.banner,
-[class*="promo"],
-[class*="banner"] {
- max-width: 280px !important;
- padding: 12px 20px !important;
- font-size: 0.9rem !important;
- line-height: 1.3 !important;
-}
-
-/* Mobile promo banner */
-@media (max-width: 768px) {
- .promo-banner,
- .banner,
- [class*="promo"],
- [class*="banner"] {
- max-width: 220px !important;
- padding: 10px 15px !important;
- font-size: 0.8rem !important;
- }
-}
-
-/* ===================================
  LANDSCAPE PHONE FIX - Logo & Header
  =================================== */
 @media (max-height: 700px) and (orientation: landscape) and (max-width: 1000px) {
@@ -1500,21 +1456,24 @@ a {
    ============================================ */
 
 .western-video-container {
-  margin: 60px auto;
-  max-width: 900px;
-  padding: 0 20px;
+  margin: 40px auto;
+  max-width: 1600px;  /* Increased from 1400px */
+  padding: 0 10px;
 }
 
 .western-frame {
   position: relative;
   background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #8B4513 100%);
-  padding: 25px;
+  padding: 15px;
   border-radius: 8px;
   box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.4),
-    inset 0 2px 4px rgba(255, 255, 255, 0.2),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.3);
-  border: 3px solid #654321;
+    0 15px 40px rgba(0, 0, 0, 0.6),
+    0 8px 15px rgba(0, 0, 0, 0.4),
+    inset 0 2px 6px rgba(255, 255, 255, 0.3),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.4),
+    0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 4px solid #654321;
+  /* REMOVED: transform properties that caused tilt */
 }
 
 /* Wood texture effect */
@@ -1544,6 +1503,7 @@ a {
   background: #654321;
   border: 2px solid #8B4513;
   z-index: 10;
+  pointer-events: none;  /* ADD THIS LINE - allows clicks to pass through */
 }
 
 .wood-corner::after {
@@ -1613,27 +1573,159 @@ a {
   height: 100%;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive - BIGGER VIDEO */
 @media (max-width: 768px) {
   .western-video-container {
-    margin: 40px auto;
+    margin: 20px auto;
+    padding: 0 5px;  /* Reduced from 20px for more space */
+    max-width: 100%;  /* Allow full width on mobile */
   }
   
   .western-frame {
-    padding: 15px;
+    padding: 12px;  /* Reduced from 15px for more video space */
   }
   
   .video-title {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+    font-size: 1rem;  /* Slightly smaller title for more video room */
+    margin-bottom: 10px;
   }
   
   .wood-corner {
-    width: 30px;
-    height: 30px;
+    width: 25px;  /* Smaller corners for more space */
+    height: 25px;
   }
   
   .wood-corner::after {
-    font-size: 16px;
+    font-size: 14px;
   }
+}
+
+/* ===================================
+ PROMOTIONAL BANNER - FLASHING
+ =================================== */
+.promo-banner {
+  position: fixed;
+  bottom: 450px;
+  right: 30px;
+  background: #FFD700 !important;
+  padding: 15px 25px !important;
+  text-align: center !important;
+  z-index: 1000 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+  max-width: 320px !important;
+}
+
+.promo-banner h2 {
+  font-weight: 800 !important;
+  margin: 0 !important;
+  animation: flash 1.5s infinite !important;
+  color: #FF0000 !important;
+  text-transform: uppercase !important;
+  font-family: 'Montserrat', sans-serif !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+  line-height: 1.2 !important;
+}
+
+.promo-banner h2 span:first-child {
+  font-size: 1.5rem !important;
+}
+
+.promo-banner h2 span:last-child {
+  font-size: 1rem !important;
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Mobile promo banner */
+@media (max-width: 768px) {
+  .promo-banner {
+    position: relative !important;
+    top: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    transform: none !important;
+    max-width: 90% !important;
+    margin: 20px auto !important;
+    padding: 12px 18px !important;
+    border-radius: 12px !important;
+    z-index: 10 !important;
+  }
+  
+  .promo-banner h2 {
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+  
+  .promo-banner h2 span:first-child {
+    font-size: 0.8rem !important;
+  }
+  
+  .promo-banner h2 span:last-child {
+    font-size: 0.7rem !important;
+    display: block !important;
+    margin-top: 3px !important;
+  }
+}
+
+/* ===================================
+ MUCH SMALLER CALL BUTTON
+ =================================== */
+.hero-cta .btn {
+  padding: 10px 25px !important;
+  font-size: 0.95rem !important;
+  border: 2px solid var(--metal-dark) !important;
+}
+
+/* Mobile - even smaller */
+@media (max-width: 768px) {
+  .hero-cta .btn {
+    padding: 8px 18px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* ===================================
+ FLASHING CALL BUTTON ANIMATION
+ =================================== */
+.hero-cta .btn-primary {
+  animation: buttonFlash 1.5s ease-in-out infinite;
+}
+
+@keyframes buttonFlash {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 
+      0 5px 0 rgba(0, 0, 0, 0.4),
+      0 8px 25px rgba(0, 0, 0, 0.4),
+      0 0 0 rgba(218, 165, 32, 0);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 
+      0 5px 0 rgba(0, 0, 0, 0.4),
+      0 8px 25px rgba(0, 0, 0, 0.4),
+      0 0 30px rgba(218, 165, 32, 0.8);
+  }
+}
+
+/* Stop flashing on hover */
+.hero-cta .btn-primary:hover {
+  animation: none;
+}
+
+/* ===================================
+ CLOSER SPACING FOR CALL BUTTON
+ =================================== */
+.hero-cta p {
+  margin-bottom: 10px !important;  /* Reduced from 15px */
+}
+
+.hero-cta {
+  gap: 5px !important;  /* Reduced from 20px */
 }
