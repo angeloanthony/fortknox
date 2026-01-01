@@ -1229,13 +1229,15 @@ a {
  .logo {
  height: 50px !important;
  max-height: 50px !important;
- margin-right: 20px !important;
+ margin-right: 40px !important;
+ left: 10px !important;
+ position: relative !important;
  }
  
  .header-content {
- padding: 5px 15px !important;
+ padding: 5px 20px !important;
  min-height: unset !important;
- gap: 15px !important;
+ gap: 30px !important;
  }
  
  .header {
@@ -1243,12 +1245,13 @@ a {
  }
  
  .nav {
- gap: 15px !important;
+ gap: 12px !important;
+ margin-left: auto !important;
  }
  
  .nav a {
- font-size: 0.85rem !important;
- padding: 6px 10px !important;
+ font-size: 0.8rem !important;
+ padding: 5px 8px !important;
  }
  
  .menu-toggle {
