@@ -1,916 +1,916 @@
 /* ===================================
-   RESET & BASE STYLES
-   =================================== */
+ RESET & BASE STYLES
+ =================================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
 :root {
-    /* Rustic Wood & Metal Colors */
-    --primary-color: #8B4513;
-    --primary-dark: #654321;
-    --secondary-color: #D2691E;
-    --accent-color: #DAA520;
-    --wood-light: #DEB887;
-    --wood-medium: #CD853F;
-    --metal-dark: #2C2C2C;
-    --metal-light: #4A4A4A;
-    --dark-bg: #1C1410;
-    --light-bg: #F5DEB3;
-    --text-dark: #2C1810;
-    --text-light: #5C4033;
-    --white: #FFF8DC;
-    
-    /* Natural Shadows */
-    --shadow-sm: 0 3px 10px rgba(44, 24, 16, 0.2);
-    --shadow-md: 0 6px 20px rgba(44, 24, 16, 0.3);
-    --shadow-lg: 0 10px 40px rgba(44, 24, 16, 0.4);
+ /* Rustic Wood & Metal Colors */
+ --primary-color: #8B4513;
+ --primary-dark: #654321;
+ --secondary-color: #D2691E;
+ --accent-color: #DAA520;
+ --wood-light: #DEB887;
+ --wood-medium: #CD853F;
+ --metal-dark: #2C2C2C;
+ --metal-light: #4A4A4A;
+ --dark-bg: #1C1410;
+ --light-bg: #F5DEB3;
+ --text-dark: #2C1810;
+ --text-light: #5C4033;
+ --white: #FFF8DC;
+ 
+ /* Natural Shadows */
+ --shadow-sm: 0 3px 10px rgba(44, 24, 16, 0.2);
+ --shadow-md: 0 6px 20px rgba(44, 24, 16, 0.3);
+ --shadow-lg: 0 10px 40px rgba(44, 24, 16, 0.4);
 }
 
 html {
-    scroll-behavior: smooth;
+ scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    color: var(--text-dark);
-    line-height: 1.7;
-    overflow-x: hidden;
-    /* REAL WOOD BACKGROUND */
-    background: #DEB887 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ font-family: 'Georgia', 'Times New Roman', serif;
+ color: var(--text-dark);
+ line-height: 1.7;
+ overflow-x: hidden;
+ /* REAL WOOD BACKGROUND */
+ background: #DEB887 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+ max-width: 100%;
+ height: auto;
+ display: block;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
+ text-decoration: none;
+ color: inherit;
+ transition: all 0.3s ease;
 }
 
 /* ===================================
-   HEADER - Real Wood Texture
-   =================================== */
+ HEADER - Real Wood Texture
+ =================================== */
 .header {
-    background: #CD853F url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-size: 400px;
-    border-bottom: 6px solid var(--metal-dark);
-    box-shadow: 
-        inset 0 -4px 0 rgba(0, 0, 0, 0.4),
-        0 5px 15px rgba(0, 0, 0, 0.4);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+ background: #CD853F url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ background-size: 400px;
+ border-bottom: 6px solid var(--metal-dark);
+ box-shadow: 
+ inset 0 -4px 0 rgba(0, 0, 0, 0.4),
+ 0 5px 15px rgba(0, 0, 0, 0.4);
+ position: sticky;
+ top: 0;
+ z-index: 1000;
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 15px 0;
 }
 
 .logo {
-    height: 80px;
-    width: auto;
-    transition: transform 0.3s ease;
-    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.6));
+ height: 80px;
+ width: auto;
+ transition: transform 0.3s ease;
+ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.6));
 }
 
 .logo:hover {
-    transform: scale(1.08) rotate(-2deg);
+ transform: scale(1.08) rotate(-2deg);
 }
 
 .nav {
-    display: flex;
-    gap: 25px;
+ display: flex;
+ gap: 25px;
 }
 
 .nav a {
-    font-family: 'Georgia', serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--metal-dark);
-    text-shadow: 1px 1px 3px rgba(218, 165, 32, 0.6);
-    position: relative;
-    padding: 8px 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+ font-family: 'Georgia', serif;
+ font-weight: 700;
+ font-size: 1.1rem;
+ color: var(--metal-dark);
+ text-shadow: 1px 1px 3px rgba(218, 165, 32, 0.6);
+ position: relative;
+ padding: 8px 16px;
+ letter-spacing: 1px;
+ text-transform: uppercase;
 }
 
 .nav a::before {
-    content: '⭐';
-    position: absolute;
-    left: -5px;
-    opacity: 0;
-    transition: all 0.3s ease;
-    color: var(--accent-color);
+ content: '⭐';
+ position: absolute;
+ left: -5px;
+ opacity: 0;
+ transition: all 0.3s ease;
+ color: var(--accent-color);
 }
 
 .nav a:hover::before {
-    opacity: 1;
-    left: -20px;
+ opacity: 1;
+ left: -20px;
 }
 
 .nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: var(--accent-color);
-    transition: width 0.3s ease;
-    box-shadow: 0 0 8px var(--accent-color);
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 0;
+ height: 3px;
+ background: var(--accent-color);
+ transition: width 0.3s ease;
+ box-shadow: 0 0 8px var(--accent-color);
 }
 
 .nav a:hover::after {
-    width: 100%;
+ width: 100%;
 }
 
 /* ===================================
-   HERO SECTION - Dark Wood Texture
-   =================================== */
+ HERO SECTION - Dark Wood Texture
+ =================================== */
 .hero {
-    position: relative;
-    background: #8B4513 url('https://www.transparenttextures.com/patterns/dark-wood.png');
-    background-size: 500px;
-    color: var(--white);
-    padding: 120px 0 80px;
-    overflow: hidden;
-    border-top: 8px solid var(--metal-dark);
-    border-bottom: 8px solid var(--metal-dark);
-    box-shadow: 
-        inset 0 8px 20px rgba(0, 0, 0, 0.6),
-        inset 0 -8px 20px rgba(0, 0, 0, 0.6);
+ position: relative;
+ background: #8B4513 url('https://www.transparenttextures.com/patterns/dark-wood.png');
+ background-size: 500px;
+ color: var(--white);
+ padding: 120px 0 80px;
+ overflow: hidden;
+ border-top: 8px solid var(--metal-dark);
+ border-bottom: 8px solid var(--metal-dark);
+ box-shadow: 
+ inset 0 8px 20px rgba(0, 0, 0, 0.6),
+ inset 0 -8px 20px rgba(0, 0, 0, 0.6);
 }
 
 .hero::before {
-    content: '⭐';
-    position: absolute;
-    top: 30px;
-    left: 40px;
-    font-size: 4rem;
-    color: var(--accent-color);
-    opacity: 0.4;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+ content: '⭐';
+ position: absolute;
+ top: 30px;
+ left: 40px;
+ font-size: 4rem;
+ color: var(--accent-color);
+ opacity: 0.4;
+ text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
 .hero::after {
-    content: '⭐';
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    font-size: 4rem;
-    color: var(--accent-color);
-    opacity: 0.4;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+ content: '⭐';
+ position: absolute;
+ top: 30px;
+ right: 40px;
+ font-size: 4rem;
+ color: var(--accent-color);
+ opacity: 0.4;
+ text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    animation: fadeInUp 0.8s ease;
+ position: relative;
+ z-index: 2;
+ text-align: center;
+ animation: fadeInUp 0.8s ease;
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+ from {
+ opacity: 0;
+ transform: translateY(30px);
+ }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
 }
 
 .hero-title {
-    font-family: 'Georgia', serif;
-    font-size: 3.5rem;
-    font-weight: 900;
-    margin-bottom: 20px;
-    text-shadow: 
-        4px 4px 0 rgba(0, 0, 0, 0.9),
-        6px 6px 15px rgba(0, 0, 0, 0.7);
-    color: var(--accent-color);
-    letter-spacing: 3px;
-    text-transform: uppercase;
+ font-family: 'Georgia', serif;
+ font-size: 3.5rem;
+ font-weight: 900;
+ margin-bottom: 20px;
+ text-shadow: 
+ 4px 4px 0 rgba(0, 0, 0, 0.9),
+ 6px 6px 15px rgba(0, 0, 0, 0.7);
+ color: var(--accent-color);
+ letter-spacing: 3px;
+ text-transform: uppercase;
 }
 
 .hero-subtitle {
-    font-size: 1.6rem;
-    margin-bottom: 40px;
-    opacity: 0.95;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-    font-style: italic;
+ font-size: 1.6rem;
+ margin-bottom: 40px;
+ opacity: 0.95;
+ text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+ font-style: italic;
 }
 
 .hero-cta {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+ display: flex;
+ gap: 20px;
+ justify-content: center;
+ flex-wrap: wrap;
 }
 
 /* ===================================
-   BUTTONS - Carved Wood Style
-   =================================== */
+ BUTTONS - Carved Wood Style
+ =================================== */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 18px 45px;
-    font-family: 'Georgia', serif;
-    font-weight: 700;
-    font-size: 1.15rem;
-    border: 4px solid var(--metal-dark);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 
-        0 5px 0 rgba(0, 0, 0, 0.4),
-        0 8px 25px rgba(0, 0, 0, 0.4);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ padding: 18px 45px;
+ font-family: 'Georgia', serif;
+ font-weight: 700;
+ font-size: 1.15rem;
+ border: 4px solid var(--metal-dark);
+ cursor: pointer;
+ transition: all 0.3s ease;
+ box-shadow: 
+ 0 5px 0 rgba(0, 0, 0, 0.4),
+ 0 8px 25px rgba(0, 0, 0, 0.4);
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ position: relative;
 }
 
 .btn::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border: 3px solid rgba(0, 0, 0, 0.3);
-    pointer-events: none;
+ content: '';
+ position: absolute;
+ top: -4px;
+ left: -4px;
+ right: -4px;
+ bottom: -4px;
+ border: 3px solid rgba(0, 0, 0, 0.3);
+ pointer-events: none;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 
-        0 8px 0 rgba(0, 0, 0, 0.4),
-        0 12px 30px rgba(0, 0, 0, 0.5);
+ transform: translateY(-3px);
+ box-shadow: 
+ 0 8px 0 rgba(0, 0, 0, 0.4),
+ 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
 .btn:active {
-    transform: translateY(2px);
-    box-shadow: 
-        0 3px 0 rgba(0, 0, 0, 0.4),
-        0 5px 20px rgba(0, 0, 0, 0.4);
+ transform: translateY(2px);
+ box-shadow: 
+ 0 3px 0 rgba(0, 0, 0, 0.4),
+ 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary {
-    background: #DEB887 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-size: 300px;
-    color: var(--metal-dark);
-    text-shadow: 1px 1px 3px rgba(218, 165, 32, 0.6);
+ background: #DEB887 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ background-size: 300px;
+ color: var(--metal-dark);
+ text-shadow: 1px 1px 3px rgba(218, 165, 32, 0.6);
 }
 
 .btn-primary:hover {
-    background: #F4D8A7 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-size: 300px;
+ background: #F4D8A7 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ background-size: 300px;
 }
 
 .btn-secondary {
-    background: linear-gradient(to bottom, #3C3C3C, #1C1C1C);
-    color: var(--accent-color);
-    border: 4px solid var(--accent-color);
-    text-shadow: 0 0 8px rgba(218, 165, 32, 0.7);
+ background: linear-gradient(to bottom, #3C3C3C, #1C1C1C);
+ color: var(--accent-color);
+ border: 4px solid var(--accent-color);
+ text-shadow: 0 0 8px rgba(218, 165, 32, 0.7);
 }
 
 .btn-secondary:hover {
-    background: linear-gradient(to bottom, #4C4C4C, #2C2C2C);
-    box-shadow: 
-        0 8px 0 rgba(0, 0, 0, 0.6),
-        0 0 25px rgba(218, 165, 32, 0.5);
+ background: linear-gradient(to bottom, #4C4C4C, #2C2C2C);
+ box-shadow: 
+ 0 8px 0 rgba(0, 0, 0, 0.6),
+ 0 0 25px rgba(218, 165, 32, 0.5);
 }
 
 /* ===================================
-   CONTACT CARD - Light Wood Texture
-   =================================== */
+ CONTACT CARD - Light Wood Texture
+ =================================== */
 .contact-card {
-    padding: 60px 0;
-    background: #F5DEB3 url('https://www.transparenttextures.com/patterns/light-wool.png');
+ padding: 60px 0;
+ background: #F5DEB3 url('https://www.transparenttextures.com/patterns/light-wool.png');
 }
 
 .card {
-    background: #F5DEB3 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-size: 400px;
-    border: 10px solid var(--primary-dark);
-    box-shadow: 
-        inset 0 0 30px rgba(0, 0, 0, 0.3),
-        var(--shadow-lg);
-    overflow: hidden;
-    animation: fadeIn 1s ease;
-    transition: transform 0.3s ease;
-    position: relative;
+ background: #F5DEB3 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ background-size: 400px;
+ border: 10px solid var(--primary-dark);
+ box-shadow: 
+ inset 0 0 30px rgba(0, 0, 0, 0.3),
+ var(--shadow-lg);
+ overflow: hidden;
+ animation: fadeIn 1s ease;
+ transition: transform 0.3s ease;
+ position: relative;
 }
 
 .card::before {
-    content: '⭐';
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    opacity: 0.6;
-    z-index: 10;
+ content: '⭐';
+ position: absolute;
+ top: 15px;
+ left: 15px;
+ font-size: 2.5rem;
+ color: var(--accent-color);
+ opacity: 0.6;
+ z-index: 10;
 }
 
 .card::after {
-    content: '⭐';
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    opacity: 0.6;
-    z-index: 10;
+ content: '⭐';
+ position: absolute;
+ top: 15px;
+ right: 15px;
+ font-size: 2.5rem;
+ color: var(--accent-color);
+ opacity: 0.6;
+ z-index: 10;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+ transform: translateY(-10px);
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+ from {
+ opacity: 0;
+ }
+ to {
+ opacity: 1;
+ }
 }
 
 .card-header {
-    background: #8B4513 url('https://www.transparenttextures.com/patterns/dark-wood.png');
-    background-size: 400px;
-    color: var(--accent-color);
-    padding: 40px;
-    text-align: center;
-    border-bottom: 6px solid var(--metal-dark);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+ background: #8B4513 url('https://www.transparenttextures.com/patterns/dark-wood.png');
+ background-size: 400px;
+ color: var(--accent-color);
+ padding: 40px;
+ text-align: center;
+ border-bottom: 6px solid var(--metal-dark);
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .card-header h2 {
-    font-family: 'Georgia', serif;
-    font-size: 2.3rem;
-    font-weight: 900;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-    text-transform: uppercase;
-    letter-spacing: 3px;
+ font-family: 'Georgia', serif;
+ font-size: 2.3rem;
+ font-weight: 900;
+ text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+ text-transform: uppercase;
+ letter-spacing: 3px;
 }
 
 .card-body {
-    padding: 50px 40px;
-    text-align: center;
+ padding: 50px 40px;
+ text-align: center;
 }
 
 .card-body h3 {
-    font-family: 'Georgia', serif;
-    font-size: 2rem;
-    color: var(--primary-dark);
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 3px rgba(218, 165, 32, 0.4);
+ font-family: 'Georgia', serif;
+ font-size: 2rem;
+ color: var(--primary-dark);
+ margin-bottom: 10px;
+ text-shadow: 1px 1px 3px rgba(218, 165, 32, 0.4);
 }
 
 .title {
-    color: var(--text-light);
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    font-style: italic;
+ color: var(--text-light);
+ font-size: 1.2rem;
+ margin-bottom: 30px;
+ font-style: italic;
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 450px;
-    margin: 0 auto;
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ max-width: 450px;
+ margin: 0 auto;
 }
 
 .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 24px;
-    background: #DEB887 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-size: 300px;
-    border: 4px solid var(--metal-dark);
-    box-shadow: 
-        inset 0 3px 8px rgba(0, 0, 0, 0.3),
-        0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+ display: flex;
+ align-items: center;
+ gap: 15px;
+ padding: 24px;
+ background: #DEB887 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ background-size: 300px;
+ border: 4px solid var(--metal-dark);
+ box-shadow: 
+ inset 0 3px 8px rgba(0, 0, 0, 0.3),
+ 0 5px 15px rgba(0, 0, 0, 0.3);
+ transition: all 0.3s ease;
 }
 
 .contact-item:hover {
-    background: #E8C897 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-size: 300px;
-    color: var(--metal-dark);
-    transform: scale(1.05);
-    box-shadow: 
-        inset 0 3px 8px rgba(0, 0, 0, 0.4),
-        0 0 20px rgba(218, 165, 32, 0.6);
+ background: #E8C897 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ background-size: 300px;
+ color: var(--metal-dark);
+ transform: scale(1.05);
+ box-shadow: 
+ inset 0 3px 8px rgba(0, 0, 0, 0.4),
+ 0 0 20px rgba(218, 165, 32, 0.6);
 }
 
 .contact-item .icon {
-    font-size: 2rem;
+ font-size: 2rem;
 }
 
 /* ===================================
-   FEATURES SECTION
-   =================================== */
+ FEATURES SECTION
+ =================================== */
 .features {
-    padding: 80px 0;
-    background: #F5DEB3 url('https://www.transparenttextures.com/patterns/light-wool.png');
+ padding: 80px 0;
+ background: #F5DEB3 url('https://www.transparenttextures.com/patterns/light-wool.png');
 }
 
 .section-title {
-    font-family: 'Georgia', serif;
-    font-size: 2.8rem;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 60px;
-    color: var(--primary-dark);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    position: relative;
-    text-shadow: 3px 3px 0 rgba(218, 165, 32, 0.4);
+ font-family: 'Georgia', serif;
+ font-size: 2.8rem;
+ font-weight: 900;
+ text-align: center;
+ margin-bottom: 60px;
+ color: var(--primary-dark);
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ position: relative;
+ text-shadow: 3px 3px 0 rgba(218, 165, 32, 0.4);
 }
 
 .section-title::before {
-    content: '⭐';
-    position: absolute;
-    left: 50%;
-    top: -45px;
-    transform: translateX(-50%);
-    font-size: 2.8rem;
-    color: var(--accent-color);
+ content: '⭐';
+ position: absolute;
+ left: 50%;
+ top: -45px;
+ transform: translateX(-50%);
+ font-size: 2.8rem;
+ color: var(--accent-color);
 }
 
 .section-title::after {
-    content: '';
-    display: block;
-    width: 140px;
-    height: 5px;
-    background: var(--accent-color);
-    margin: 30px auto 0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+ content: '';
+ display: block;
+ width: 140px;
+ height: 5px;
+ background: var(--accent-color);
+ margin: 30px auto 0;
+ box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 35px;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 35px;
 }
 
 .feature-card {
-    background: #F5DEB3 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-size: 350px;
-    padding: 45px 35px;
-    border: 6px solid var(--primary-dark);
-    text-align: center;
-    box-shadow: 
-        inset 0 0 20px rgba(0, 0, 0, 0.15),
-        var(--shadow-sm);
-    transition: all 0.3s ease;
-    position: relative;
+ background: #F5DEB3 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ background-size: 350px;
+ padding: 45px 35px;
+ border: 6px solid var(--primary-dark);
+ text-align: center;
+ box-shadow: 
+ inset 0 0 20px rgba(0, 0, 0, 0.15),
+ var(--shadow-sm);
+ transition: all 0.3s ease;
+ position: relative;
 }
 
 .feature-card::before {
-    content: '✦';
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    color: var(--accent-color);
-    font-size: 1.4rem;
-    opacity: 0.7;
+ content: '✦';
+ position: absolute;
+ top: 12px;
+ left: 12px;
+ color: var(--accent-color);
+ font-size: 1.4rem;
+ opacity: 0.7;
 }
 
 .feature-card::after {
-    content: '✦';
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    color: var(--accent-color);
-    font-size: 1.4rem;
-    opacity: 0.7;
+ content: '✦';
+ position: absolute;
+ top: 12px;
+ right: 12px;
+ color: var(--accent-color);
+ font-size: 1.4rem;
+ opacity: 0.7;
 }
 
 .feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 
-        inset 0 0 25px rgba(0, 0, 0, 0.25),
-        var(--shadow-lg);
-    border-color: var(--accent-color);
+ transform: translateY(-10px);
+ box-shadow: 
+ inset 0 0 25px rgba(0, 0, 0, 0.25),
+ var(--shadow-lg);
+ border-color: var(--accent-color);
 }
 
 .feature-icon {
-    font-size: 4.5rem;
-    margin-bottom: 25px;
-    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.4));
+ font-size: 4.5rem;
+ margin-bottom: 25px;
+ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.4));
 }
 
 .feature-card:hover .feature-icon {
-    animation: swing 0.6s ease;
+ animation: swing 0.6s ease;
 }
 
 @keyframes swing {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(-12deg); }
-    75% { transform: rotate(12deg); }
+ 0%, 100% { transform: rotate(0deg); }
+ 25% { transform: rotate(-12deg); }
+ 75% { transform: rotate(12deg); }
 }
 
 .feature-card h3 {
-    font-family: 'Georgia', serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-dark);
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+ font-family: 'Georgia', serif;
+ font-size: 1.5rem;
+ font-weight: 700;
+ color: var(--primary-dark);
+ margin-bottom: 18px;
+ text-transform: uppercase;
+ letter-spacing: 1px;
 }
 
 .feature-card p {
-    color: var(--text-dark);
-    line-height: 1.8;
+ color: var(--text-dark);
+ line-height: 1.8;
 }
 
 /* ===================================
-   GALLERY SECTION
-   =================================== */
+ GALLERY SECTION
+ =================================== */
 .gallery {
-    padding: 80px 0;
-    background: #E8D5B7 url('https://www.transparenttextures.com/patterns/light-wool.png');
+ padding: 80px 0;
+ background: #E8D5B7 url('https://www.transparenttextures.com/patterns/light-wool.png');
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 35px;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 35px;
 }
 
 .gallery-item {
-    position: relative;
-    border: 8px solid var(--primary-dark);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    aspect-ratio: 4/3;
-    cursor: pointer;
-    background: var(--metal-dark);
+ position: relative;
+ border: 8px solid var(--primary-dark);
+ overflow: hidden;
+ box-shadow: var(--shadow-md);
+ aspect-ratio: 4/3;
+ cursor: pointer;
+ background: var(--metal-dark);
 }
 
 .gallery-item::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border: 3px solid var(--accent-color);
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+ content: '';
+ position: absolute;
+ top: -4px;
+ left: -4px;
+ right: -4px;
+ bottom: -4px;
+ border: 3px solid var(--accent-color);
+ z-index: 1;
+ opacity: 0;
+ transition: opacity 0.3s ease;
 }
 
 .gallery-item:hover::before {
-    opacity: 1;
+ opacity: 1;
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: transform 0.5s ease;
 }
 
 .gallery-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(44, 24, 16, 0.98), transparent);
-    color: var(--accent-color);
-    padding: 35px 25px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-    z-index: 2;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ background: linear-gradient(to top, rgba(44, 24, 16, 0.98), transparent);
+ color: var(--accent-color);
+ padding: 35px 25px;
+ transform: translateY(100%);
+ transition: transform 0.3s ease;
+ z-index: 2;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+ transform: scale(1.1);
 }
 
 .gallery-item:hover .gallery-overlay {
-    transform: translateY(0);
+ transform: translateY(0);
 }
 
 .gallery-overlay h3 {
-    font-family: 'Georgia', serif;
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+ font-family: 'Georgia', serif;
+ font-size: 1.6rem;
+ margin-bottom: 12px;
+ text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
 }
 
 /* ===================================
-   LOCATION SECTION
-   =================================== */
+ LOCATION SECTION
+ =================================== */
 .location {
-    padding: 80px 0;
-    background: #F5DEB3 url('https://www.transparenttextures.com/patterns/light-wool.png');
+ padding: 80px 0;
+ background: #F5DEB3 url('https://www.transparenttextures.com/patterns/light-wool.png');
 }
 
 .location-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 60px;
+ align-items: center;
 }
 
 .location-info h2 {
-    font-family: 'Georgia', serif;
-    font-size: 2.5rem;
-    color: var(--primary-dark);
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+ font-family: 'Georgia', serif;
+ font-size: 2.5rem;
+ color: var(--primary-dark);
+ margin-bottom: 30px;
+ text-transform: uppercase;
+ letter-spacing: 2px;
 }
 
 .location-address {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    line-height: 2;
-    color: var(--text-dark);
+ font-size: 1.2rem;
+ margin-bottom: 30px;
+ line-height: 2;
+ color: var(--text-dark);
 }
 
 .location-address a {
-    color: var(--primary-dark);
-    font-weight: 700;
+ color: var(--primary-dark);
+ font-weight: 700;
 }
 
 .location-address a:hover {
-    color: var(--accent-color);
-    text-shadow: 0 0 8px rgba(218, 165, 32, 0.6);
+ color: var(--accent-color);
+ text-shadow: 0 0 8px rgba(218, 165, 32, 0.6);
 }
 
 .hours {
-    background: #CD853F url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-size: 350px;
-    padding: 35px;
-    border: 5px solid var(--primary-dark);
-    margin-bottom: 30px;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+ background: #CD853F url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ background-size: 350px;
+ padding: 35px;
+ border: 5px solid var(--primary-dark);
+ margin-bottom: 30px;
+ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .hours h3 {
-    font-family: 'Georgia', serif;
-    color: var(--metal-dark);
-    margin-bottom: 18px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+ font-family: 'Georgia', serif;
+ color: var(--metal-dark);
+ margin-bottom: 18px;
+ font-size: 1.5rem;
+ text-transform: uppercase;
 }
 
 .map-placeholder {
-    background: #F5DEB3 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-size: 400px;
-    border: 6px solid var(--primary-dark);
-    padding: 80px 40px;
-    text-align: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25);
+ background: #F5DEB3 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ background-size: 400px;
+ border: 6px solid var(--primary-dark);
+ padding: 80px 40px;
+ text-align: center;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25);
 }
 
 .map-placeholder p {
-    font-size: 4rem;
-    margin-bottom: 20px;
+ font-size: 4rem;
+ margin-bottom: 20px;
 }
 
 /* ===================================
-   RELATED BUSINESSES
-   =================================== */
+ RELATED BUSINESSES
+ =================================== */
 .related {
-    padding: 80px 0;
-    background: #E8D5B7 url('https://www.transparenttextures.com/patterns/light-wool.png');
+ padding: 80px 0;
+ background: #E8D5B7 url('https://www.transparenttextures.com/patterns/light-wool.png');
 }
 
 .related-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 35px;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 35px;
 }
 
 .related-card {
-    background: #F5DEB3 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-size: 380px;
-    padding: 50px;
-    border: 7px solid var(--primary-dark);
-    text-align: center;
-    box-shadow: 
-        inset 0 0 20px rgba(0, 0, 0, 0.15),
-        var(--shadow-md);
-    transition: all 0.3s ease;
-    position: relative;
+ background: #F5DEB3 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ background-size: 380px;
+ padding: 50px;
+ border: 7px solid var(--primary-dark);
+ text-align: center;
+ box-shadow: 
+ inset 0 0 20px rgba(0, 0, 0, 0.15),
+ var(--shadow-md);
+ transition: all 0.3s ease;
+ position: relative;
 }
 
 .related-card::before {
-    content: '⭐';
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    opacity: 0.6;
+ content: '⭐';
+ position: absolute;
+ bottom: 20px;
+ left: 50%;
+ transform: translateX(-50%);
+ font-size: 2.5rem;
+ color: var(--accent-color);
+ opacity: 0.6;
 }
 
 .related-card:hover {
-    transform: translateY(-12px);
-    border-color: var(--accent-color);
-    box-shadow: 
-        inset 0 0 25px rgba(0, 0, 0, 0.25),
-        var(--shadow-lg);
+ transform: translateY(-12px);
+ border-color: var(--accent-color);
+ box-shadow: 
+ inset 0 0 25px rgba(0, 0, 0, 0.25),
+ var(--shadow-lg);
 }
 
 .related-card h3 {
-    font-family: 'Georgia', serif;
-    font-size: 2rem;
-    color: var(--primary-dark);
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+ font-family: 'Georgia', serif;
+ font-size: 2rem;
+ color: var(--primary-dark);
+ margin-bottom: 18px;
+ text-transform: uppercase;
+ letter-spacing: 2px;
 }
 
 .related-card p {
-    color: var(--text-dark);
-    line-height: 1.8;
+ color: var(--text-dark);
+ line-height: 1.8;
 }
 
 /* ===================================
-   FOOTER - DARK WOOD
-   =================================== */
+ FOOTER - DARK WOOD
+ =================================== */
 .footer {
-    background: #2C1810 url('https://www.transparenttextures.com/patterns/dark-wood.png');
-    background-size: 500px;
-    color: var(--wood-light);
-    padding: 60px 0 30px;
-    border-top: 10px solid var(--metal-dark);
-    box-shadow: inset 0 8px 25px rgba(0, 0, 0, 0.7);
+ background: #2C1810 url('https://www.transparenttextures.com/patterns/dark-wood.png');
+ background-size: 500px;
+ color: var(--wood-light);
+ padding: 60px 0 30px;
+ border-top: 10px solid var(--metal-dark);
+ box-shadow: inset 0 8px 25px rgba(0, 0, 0, 0.7);
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 40px;
+ margin-bottom: 40px;
 }
 
 .footer-section h3 {
-    font-family: 'Georgia', serif;
-    font-size: 1.5rem;
-    margin-bottom: 22px;
-    color: var(--accent-color);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+ font-family: 'Georgia', serif;
+ font-size: 1.5rem;
+ margin-bottom: 22px;
+ color: var(--accent-color);
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
 .footer-section p {
-    line-height: 2;
-    opacity: 0.95;
+ line-height: 2;
+ opacity: 0.95;
 }
 
 .footer-section a {
-    display: block;
-    margin-bottom: 14px;
-    opacity: 0.85;
-    transition: all 0.3s ease;
-    position: relative;
-    padding-left: 0;
+ display: block;
+ margin-bottom: 14px;
+ opacity: 0.85;
+ transition: all 0.3s ease;
+ position: relative;
+ padding-left: 0;
 }
 
 .footer-section a::before {
-    content: '▸';
-    position: absolute;
-    left: -18px;
-    opacity: 0;
-    transition: all 0.3s ease;
-    color: var(--accent-color);
+ content: '▸';
+ position: absolute;
+ left: -18px;
+ opacity: 0;
+ transition: all 0.3s ease;
+ color: var(--accent-color);
 }
 
 .footer-section a:hover {
-    opacity: 1;
-    color: var(--accent-color);
-    padding-left: 18px;
-    text-shadow: 0 0 10px rgba(218, 165, 32, 0.7);
+ opacity: 1;
+ color: var(--accent-color);
+ padding-left: 18px;
+ text-shadow: 0 0 10px rgba(218, 165, 32, 0.7);
 }
 
 .footer-section a:hover::before {
-    opacity: 1;
-    left: 0;
+ opacity: 1;
+ left: 0;
 }
 
 .footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 3px solid var(--metal-dark);
-    opacity: 0.85;
-    font-style: italic;
+ text-align: center;
+ padding-top: 30px;
+ border-top: 3px solid var(--metal-dark);
+ opacity: 0.85;
+ font-style: italic;
 }
 
 /* ===================================
-   RESPONSIVE DESIGN
-   =================================== */
+ RESPONSIVE DESIGN
+ =================================== */
 @media (max-width: 768px) {
-    .nav {
-        display: none;
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .location-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .features-grid,
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .logo {
-        height: 60px;
-    }
+ .nav {
+ display: none;
+ }
+ 
+ .hero-title {
+ font-size: 2.5rem;
+ }
+ 
+ .hero-subtitle {
+ font-size: 1.2rem;
+ }
+ 
+ .hero-cta {
+ flex-direction: column;
+ align-items: center;
+ }
+ 
+ .section-title {
+ font-size: 2rem;
+ }
+ 
+ .location-content {
+ grid-template-columns: 1fr;
+ }
+ 
+ .features-grid,
+ .gallery-grid {
+ grid-template-columns: 1fr;
+ }
+ 
+ .logo {
+ height: 60px;
+ }
 }
 
 /* ===================================
-   ANIMATIONS
-   =================================== */
+ ANIMATIONS
+ =================================== */
 @keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.7;
-    }
+ 0%, 100% {
+ opacity: 1;
+ }
+ 50% {
+ opacity: 0.7;
+ }
 }
 
 @keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+ from {
+ opacity: 0;
+ transform: translateX(-50px);
+ }
+ to {
+ opacity: 1;
+ transform: translateX(0);
+ }
 }
 
 @keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+ from {
+ opacity: 0;
+ transform: translateX(50px);
+ }
+ to {
+ opacity: 1;
+ transform: translateX(0);
+ }
 }
 
 /* Scroll Animations */
 .features-grid > *,
 .gallery-grid > * {
-    animation: fadeInUp 0.6s ease forwards;
-    opacity: 0;
+ animation: fadeInUp 0.6s ease forwards;
+ opacity: 0;
 }
 
 .features-grid > *:nth-child(1) { animation-delay: 0.1s; }
@@ -927,333 +927,326 @@ a {
 
 /* Active navigation link styling */
 .nav a.active {
-    background-color: #633c30;
-    color: white;
-    font-weight: 700;
+ background-color: #633c30;
+ color: white;
+ font-weight: 700;
 }
 
 /* Or if you prefer an underline style */
 .nav a.active {
-    border-bottom: 3px solid #2c0f06;
-    color: #e9bdb0;
-    font-weight: 700;
+ border-bottom: 3px solid #2c0f06;
+ color: #e9bdb0;
+ font-weight: 700;
 }
 
 /* Logo styling */
 .logo {
-    height: 200px;  /* Make it bigger - adjust this number as needed */
-    width: auto;
-    margin-left: auto;  /* Pushes it to the left */
+ height: 200px;  /* Make it bigger - adjust this number as needed */
+ width: auto;
+ margin-left: auto;  /* Pushes it to the left */
 }
 
 /* Adjust header to accommodate larger logo */
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 20px;
 }
 
 .header-content a {
-    display: flex;
-    align-items: center;
+ display: flex;
+ align-items: center;
 }
 
 /* ===================================
-   ACTIVE NAVIGATION LINK
-   =================================== */
+ ACTIVE NAVIGATION LINK
+ =================================== */
 .nav a.active {
-  background-color: #633c30;
-  color: white;
-  font-weight: 700;
-  border-radius: 5px;
+ background-color: #633c30;
+ color: white;
+ font-weight: 700;
+ border-radius: 5px;
 }
 
 /* ===================================
-   MOBILE RESPONSIVE LOGO
-   =================================== */
+ MOBILE RESPONSIVE LOGO
+ =================================== */
 @media (max-width: 768px) {
-  .logo {
-    height: 80px !important;
-    left: 10px !important;
-    top: 5px !important;
-  }
+ .logo {
+ height: 80px !important;
+ left: 10px !important;
+ top: 5px !important;
+ }
 }
 
 @media (max-width: 480px) {
-  .logo {
-    height: 60px !important;
-    left: 5px !important;
-    top: 5px !important;
-  }
+ .logo {
+ height: 60px !important;
+ left: 5px !important;
+ top: 5px !important;
+ }
 }
 
 /* ===================================
-   HAMBURGER MENU
-   =================================== */
+ HAMBURGER MENU
+ =================================== */
 .menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 1001;
-  background: rgba(139, 69, 19, 0.9);
-  border-radius: 5px;
-  position: fixed;
-  right: 15px;    /* Changed from 70px - moves it back to the right */
-  top: 20px;
+ display: none;
+ flex-direction: column;
+ gap: 6px;
+ cursor: pointer;
+ padding: 10px;
+ z-index: 1001;
+ background: rgba(139, 69, 19, 0.9);
+ border-radius: 5px;
+ position: fixed;
+ right: 15px;    /* Changed from 70px - moves it back to the right */
+ top: 20px;
 }
 
 .menu-toggle span {
-  width: 30px;
-  height: 3px;
-  background: var(--accent-color);
-  transition: all 0.3s ease;
-  border-radius: 2px;
+ width: 30px;
+ height: 3px;
+ background: var(--accent-color);
+ transition: all 0.3s ease;
+ border-radius: 2px;
 }
 
 /* Animate to X when active */
 .menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
+ transform: rotate(45deg) translate(8px, 8px);
 }
 
 .menu-toggle.active span:nth-child(2) {
-  opacity: 0;
+ opacity: 0;
 }
 
 .menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+ transform: rotate(-45deg) translate(7px, -7px);
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-  
-  .nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100vh;
-    background: #CD853F url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    flex-direction: column;
-    padding: 80px 30px 30px;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
-    transition: right 0.3s ease;
-    z-index: 999;
-    display: flex !important;
-  }
-  
-  .nav.active {
-    right: 0;
-  }
-  
-  .nav a {
-    padding: 15px 10px;
-    border-bottom: 2px solid rgba(0,0,0,0.2);
-  }
-}
-
-/* ===================================
-   MOBILE FIXES - TEXT CUTOFF ONLY
-   =================================== */
-@media (max-width: 768px) {
-  /* Prevent horizontal scroll */
-  html, body {
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
-  }
-  
-  /* Force all containers to stay within viewport */
-  .container,
-  .hero-content,
-  .location-content,
-  .features-grid,
-  .gallery-grid {
-    max-width: 100vw !important;
-    padding-left: 25px !important;
-    padding-right: 25px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  
-  /* Fix text that's getting cut off */
-  .hero-title,
-  .section-title,
-  .location-info h2 {
-    font-size: 1.6rem !important;
-    line-height: 1.3 !important;
-    padding: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    word-break: break-word !important;
-  }
-  
-  /* Ensure all text wraps */
-  * {
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-  }
-  
-  /* Fix sections */
-  section {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-  }
-  
-  /* Fix map and other wide elements */
-  .map-placeholder {
-    padding: 30px 15px !important;
-  }
-  
-  .map-placeholder p {
-    font-size: 2rem !important;
-  }
-}
-
-@media (max-width: 768px) {
-  /* EXTREME FOOTER FIX - MORE LEFT PADDING */
-  .footer {
-    padding: 40px 0 20px !important;
-    margin: 0 !important;
-  }
-  
-  .footer .container {
-    padding: 0 40px !important;  /* Increased from 25px to 40px */
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr !important;
-    gap: 30px !important;
-    padding: 0 15px !important;  /* Added extra padding */
-    margin: 0 !important;
-  }
-  
-  .footer-section {
-    width: 100% !important;
-    padding-left: 15px !important;  /* Added extra padding */
-    margin: 0 !important;
-    text-align: left !important;
-  }
-  
-  .footer-section h3 {
-    font-size: 1.3rem !important;
-    margin: 0 0 15px 0 !important;
-    padding-left: 10px !important;  /* Extra padding */
-  }
-  
-  .footer-section p,
-  .footer-section a {
-    padding-left: 10px !important;  /* Extra padding */
-    margin: 0 0 10px 0 !important;
-  }
-  
-  /* Remove all pseudo-elements */
-  .footer-section a::before,
-  .footer-section a::after {
-    display: none !important;
-  }
-  
-  .footer-bottom {
-    padding: 20px 15px !important;
-    margin-top: 30px !important;
-  }
-}
-@media (max-width: 768px) {
-  /* FIX RELATED BUSINESSES SECTION */
-  .related {
-    padding: 40px 0 !important;
-    margin: 0 !important;
-  }
-  
-  .related .container {
-    padding: 0 40px !important;  /* More left/right padding */
-    max-width: 100% !important;
-  }
-  
-  .related-grid {
-    grid-template-columns: 1fr !important;
-    gap: 25px !important;
-    padding: 0 15px !important;  /* Extra padding */
-  }
-  
-  .related-card {
-    width: 100% !important;
-    padding: 30px 25px !important;
-    margin: 0 !important;
-    text-align: center !important;
-  }
-  
-  .related-card h3 {
-    font-size: 1.5rem !important;
-    padding: 0 !important;
-  }
-  
-  .related-card p {
-    padding: 0 !important;
-  }
-  
-  /* Hide decorative star */
-  .related-card::before {
-    display: none !important;
-  }
+ .menu-toggle {
+ display: flex;
+ }
+ 
+ .nav {
+ position: fixed;
+ top: 0;
+ right: -100%;
+ width: 70%;
+ height: 100vh;
+ background: #CD853F url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+ flex-direction: column;
+ padding: 80px 30px 30px;
+ box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+ transition: right 0.3s ease;
+ z-index: 999;
+ display: flex !important;
+ }
+ 
+ .nav.active {
+ right: 0;
+ }
+ 
+ .nav a {
+ padding: 15px 10px;
+ border-bottom: 2px solid rgba(0,0,0,0.2);
+ }
 }
 
 /* ===================================
-   MOBILE RESPONSIVE LOGO
-   =================================== */
+ MOBILE FIXES - TEXT CUTOFF ONLY
+ =================================== */
 @media (max-width: 768px) {
-  .logo {
-    left: 20px !important;
-    top: 10px !important;
-    height: 90px !important;  /* Increased from 70px */
-  }
+ /* Prevent horizontal scroll */
+ html, body {
+ overflow-x: hidden !important;
+ max-width: 100vw !important;
+ }
+ 
+ /* Force all containers to stay within viewport */
+ .container,
+ .hero-content,
+ .location-content,
+ .features-grid,
+ .gallery-grid {
+ max-width: 100vw !important;
+ padding-left: 25px !important;
+ padding-right: 25px !important;
+ margin-left: 0 !important;
+ margin-right: 0 !important;
+ }
+ 
+ /* Fix text that's getting cut off */
+ .hero-title,
+ .section-title,
+ .location-info h2 {
+ font-size: 1.6rem !important;
+ line-height: 1.3 !important;
+ padding: 0 !important;
+ margin-left: 0 !important;
+ margin-right: 0 !important;
+ word-break: break-word !important;
+ }
+ 
+ /* Ensure all text wraps */
+ * {
+ word-wrap: break-word !important;
+ overflow-wrap: break-word !important;
+ }
+ 
+ /* Fix sections */
+ section {
+ max-width: 100vw !important;
+ overflow-x: hidden !important;
+ }
+ 
+ /* Fix map and other wide elements */
+ .map-placeholder {
+ padding: 30px 15px !important;
+ }
+ 
+ .map-placeholder p {
+ font-size: 2rem !important;
+ }
+}
+
+@media (max-width: 768px) {
+ /* EXTREME FOOTER FIX - MORE LEFT PADDING */
+ .footer {
+ padding: 40px 0 20px !important;
+ margin: 0 !important;
+ }
+ 
+ .footer .container {
+ padding: 0 40px !important;  /* Increased from 25px to 40px */
+ max-width: 100% !important;
+ margin: 0 !important;
+ }
+ 
+ .footer-content {
+ grid-template-columns: 1fr !important;
+ gap: 30px !important;
+ padding: 0 15px !important;  /* Added extra padding */
+ margin: 0 !important;
+ }
+ 
+ .footer-section {
+ width: 100% !important;
+ padding-left: 15px !important;  /* Added extra padding */
+ margin: 0 !important;
+ text-align: left !important;
+ }
+ 
+ .footer-section h3 {
+ font-size: 1.3rem !important;
+ margin: 0 0 15px 0 !important;
+ padding-left: 10px !important;  /* Extra padding */
+ }
+ 
+ .footer-section p,
+ .footer-section a {
+ padding-left: 10px !important;  /* Extra padding */
+ margin: 0 0 10px 0 !important;
+ }
+ 
+ /* Remove all pseudo-elements */
+ .footer-section a::before,
+ .footer-section a::after {
+ display: none !important;
+ }
+ 
+ .footer-bottom {
+ padding: 20px 15px !important;
+ margin-top: 30px !important;
+ }
+}
+@media (max-width: 768px) {
+ /* FIX RELATED BUSINESSES SECTION */
+ .related {
+ padding: 40px 0 !important;
+ margin: 0 !important;
+ }
+ 
+ .related .container {
+ padding: 0 40px !important;  /* More left/right padding */
+ max-width: 100% !important;
+ }
+ 
+ .related-grid {
+ grid-template-columns: 1fr !important;
+ gap: 25px !important;
+ padding: 0 15px !important;  /* Extra padding */
+ }
+ 
+ .related-card {
+ width: 100% !important;
+ padding: 30px 25px !important;
+ margin: 0 !important;
+ text-align: center !important;
+ }
+ 
+ .related-card h3 {
+ font-size: 1.5rem !important;
+ padding: 0 !important;
+ }
+ 
+ .related-card p {
+ padding: 0 !important;
+ }
+ 
+ /* Hide decorative star */
+ .related-card::before {
+ display: none !important;
+ }
+}
+
+/* ===================================
+ MOBILE RESPONSIVE LOGO
+ =================================== */
+@media (max-width: 768px) {
+ .logo {
+ left: 20px !important;
+ top: 10px !important;
+ height: 90px !important;  /* Increased from 70px */
+ }
 }
 
 @media (max-width: 480px) {
-  .logo {
-    left: 50px !important;
-    top: 5px !important;
-    height: 90px !important;  /* Increased from 60px */
-  }
+ .logo {
+ left: 50px !important;
+ top: 5px !important;
+ height: 90px !important;  /* Increased from 60px */
+ }
 }
 
 /* ===================================
-   LANDSCAPE MOBILE FIX - Logo & Header
-   =================================== */
-@media (max-height: 500px) and (orientation: landscape) {
-  .logo {
-    height: 50px !important;
-    max-height: 50px !important;
-  }
-  
-  .header-content {
-    padding: 5px 0 !important;
-    min-height: unset !important;
-  }
-  
-  .header {
-    min-height: unset !important;
-  }
-  
-  .nav a {
-    font-size: 0.9rem !important;
-    padding: 6px 12px !important;
-  }
-  
-  .menu-toggle {
-    top: 10px !important;
-    right: 10px !important;
-  }
-}
-
-/* Wider landscape phones */
-@media (max-height: 600px) and (orientation: landscape) and (min-width: 600px) {
-  .logo {
-    height: 60px !important;
-  }
+ LANDSCAPE PHONE FIX - Logo & Header
+ =================================== */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 1000px) {
+ .logo {
+ height: 50px !important;
+ max-height: 50px !important;
+ }
+ 
+ .header-content {
+ padding: 5px 0 !important;
+ min-height: unset !important;
+ }
+ 
+ .header {
+ min-height: unset !important;
+ }
+ 
+ .nav a {
+ font-size: 0.9rem !important;
+ padding: 6px 12px !important;
+ }
+ 
+ .menu-toggle {
+ top: 10px !important;
+ right: 10px !important;
+ }
 }
