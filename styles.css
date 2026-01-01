@@ -1221,3 +1221,39 @@ a {
     height: 90px !important;  /* Increased from 60px */
   }
 }
+
+/* ===================================
+   LANDSCAPE MOBILE FIX - Logo & Header
+   =================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .logo {
+    height: 50px !important;
+    max-height: 50px !important;
+  }
+  
+  .header-content {
+    padding: 5px 0 !important;
+    min-height: unset !important;
+  }
+  
+  .header {
+    min-height: unset !important;
+  }
+  
+  .nav a {
+    font-size: 0.9rem !important;
+    padding: 6px 12px !important;
+  }
+  
+  .menu-toggle {
+    top: 10px !important;
+    right: 10px !important;
+  }
+}
+
+/* Wider landscape phones */
+@media (max-height: 600px) and (orientation: landscape) and (min-width: 600px) {
+  .logo {
+    height: 60px !important;
+  }
+}
