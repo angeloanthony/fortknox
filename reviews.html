@@ -336,15 +336,23 @@
   });
 </script>
 
-<script>// Review Carousel Navigation
+<script>
+  // Review Carousel Navigation
   function scrollCarousel(direction) {
     const container = document.getElementById('reviewTrack');
-    const scrollAmount = 370; // Width of card + gap
+    
+    // Check if we are on mobile (screen less than 768px)
+    // If mobile, scroll 295px (280 card + 15 gap)
+    // If desktop, scroll 370px (350 card + 20 gap)
+    const isMobile = window.innerWidth <= 768;
+    const scrollAmount = isMobile ? 295 : 370;
+
     container.scrollBy({
       left: direction * scrollAmount,
       behavior: 'smooth'
     });
-  }</script>
+  }
+</script>
 
 </body>
 </html>
