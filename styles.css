@@ -1267,3 +1267,115 @@ a {
     right: 10px !important;
   }
 }
+
+/* Carousel Container */
+.review-carousel-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.review-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-bottom: 20px;
+  /* Hide scrollbar for clean look */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.review-carousel::-webkit-scrollbar { 
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual Review Card */
+.carousel-card {
+  flex: 0 0 auto;
+  width: 350px; /* Fixed width for consistency */
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+}
+
+.reviewer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.reviewer-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #f39c12; /* Brand Color */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 12px;
+}
+
+.reviewer-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.stars {
+  color: #f39c12;
+  font-size: 0.9rem;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  font-style: italic;
+  flex-grow: 1; /* Pushes date to bottom */
+}
+
+.review-date {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn:hover { background: #f9f9f9; }
+.prev-btn { left: -10px; }
+.next-btn { right: -10px; }
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .carousel-card { width: 280px; }
+  .prev-btn, .next-btn { display: none; } /* On mobile, people naturally swipe */
+}
