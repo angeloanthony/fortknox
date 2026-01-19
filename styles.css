@@ -814,43 +814,30 @@ a {
 }
 
 /* ===================================
- PROMOTIONAL BANNER - FLASHING
+ PROMOTIONAL BANNER - IMAGE
  =================================== */
 .promo-banner {
  position: fixed;
  bottom: 450px;
  right: 30px;
- background: #FFD700;
- padding: 15px 25px;
+ background: transparent;
+ padding: 0;
  text-align: center;
  z-index: 1000;
- border-radius: 20px;
+ border-radius: 0;
  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
- max-width: 320px;
+ max-width: 400px;
+}
+
+.promo-banner img {
+ width: 100%;
+ height: auto;
+ display: block;
+ border-radius: 8px;
 }
 
 .promo-banner h2 {
- font-weight: 800;
- margin: 0;
- animation: flash 1.5s infinite;
- color: #FF0000;
- text-transform: uppercase;
- font-family: 'Montserrat', sans-serif;
- text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
- line-height: 1.2;
-}
-
-.promo-banner h2 span:first-child {
- font-size: 1.5rem;
-}
-
-.promo-banner h2 span:last-child {
- font-size: 1rem;
-}
-
-@keyframes flash {
- 0%, 100% { opacity: 1; }
- 50% { opacity: 0.3; }
+ display: none;
 }
 
 /* ===================================
@@ -1273,7 +1260,7 @@ a {
  margin-top: 30px !important;
  }
  
- /* Promotional banner */
+  /* Promotional banner - mobile */
  .promo-banner {
  position: relative !important;
  top: auto !important;
@@ -1281,25 +1268,15 @@ a {
  right: 0 !important;
  bottom: auto !important;
  transform: none !important;
- max-width: 90% !important;
+ max-width: 95% !important;
  margin: 20px auto !important;
- padding: 12px 18px !important;
- border-radius: 12px !important;
+ padding: 0 !important;
+ border-radius: 0 !important;
  z-index: 10 !important;
  }
  
- .promo-banner h2 {
- font-size: 0.8rem !important;
- }
- 
- .promo-banner h2 span:first-child {
- font-size: 0.8rem !important;
- }
- 
- .promo-banner h2 span:last-child {
- font-size: 0.7rem !important;
- display: block !important;
- margin-top: 3px !important;
+ .promo-banner img {
+ border-radius: 8px !important;
  }
  
  /* ===== MOBILE CAROUSEL FIX ===== */
