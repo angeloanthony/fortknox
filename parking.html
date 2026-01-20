@@ -270,35 +270,56 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                
                 <div class="footer-section">
                     <h3>Fort Knox Self Storage</h3>
-                    <p>Your trusted storage solution provider</p>
+                    <p>Your LOCAL source for shipping containers and secure storage serving the Uintah Basin! 📦🏔️</p>
                 </div>
+
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <p>James Richards, Owner/Manager<br>
                     📞 <a href="tel:435-828-7710" style="color: inherit;">435-828-7710</a><br>
-                    📧 <a href="mailto:james.richard500@gmail.com" style="color: inherit;">james.richard500@gmail.com</a></p>
+                    📧 <a href="mailto:james.richard500@gmail.com" style="color: inherit;">james.richard500@gmail.com</a><br>
+                    <strong style="color: var(--accent-color);">Serving the Uintah Basin Area</strong></p>
                 </div>
+
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="index.html#units">Storage Units</a>
-                    <a href="parking.html">Auto/RV/Boat Parking</a>
-                    <a href="container-sales.html">Container Sales</a>
-                    <a href="index.html#contact">Contact</a>
+                    <a href="index.html">🏠 Home</a>
+                    <a href="parking.html">🚐 RV/Boat Parking</a>
+                    <a href="reviews.html">⭐ Reviews</a>
+                    <a href="gallery.html">📸 Gallery</a>
+                    <a href="container-sales.html">📦 Container Sales</a>
+                    <a href="index.html#contact">📞 Contact</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Our Family of Storage</h3>
+                    <p style="margin-bottom: 10px; font-size: 0.9em;">Visit our partner locations:</p>
+                    <a href="https://www.ashleyvalleystorage.com/" target="_blank">Ashley Valley Self Storage</a>
+                    <a href="https://www.naples-storage.com/" target="_blank">Naples Self Storage</a>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2024 Fort Knox Self Storage. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Fort Knox Self Storage. All rights reserved. Buy local! 🏔️</p>
+                
+                <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+
+                <p style="margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    Powered by cozelosdata.com
+                    <a href="https://cozelosdata.com" target="_blank" style="text-decoration: none;">
+                        <img src="pictures/cozeloslogo.webp" alt="Cozelos Data" style="height: 30px; width: auto; vertical-align: middle;">
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
+
 
     <script>
   // Mobile menu toggle
