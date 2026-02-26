@@ -1,261 +1,828 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Gallery - Fort Knox Self Storage</title>
- <link rel="stylesheet" href="styles.css">
- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
- <style>
- .carousel-container {
- position: relative; max-width: 1000px; margin: 40px auto; overflow: hidden;
- border: 10px solid #654321; border-radius: 15px; box-shadow: 0 10px 40px rgba(44, 24, 16, 0.4); background: #2C2C2C;
- }
- .carousel-slides { display: flex; transition: transform 0.5s ease-in-out; }
- .carousel-slide { min-width: 100%; position: relative; }
- .carousel-slide img { width: 100%; height: 600px; object-fit: cover; display: block; }
- .carousel-overlay {
- position: absolute; bottom: 0; left: 0; right: 0;
- background: linear-gradient(to top, rgba(44, 24, 16, 0.95), transparent);
- color: #DAA520; padding: 40px; text-align: center;
- }
- .carousel-overlay h3 { font-size: 2rem; margin-bottom: 10px; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); text-transform: uppercase; }
- .carousel-btn {
- position: absolute; top: 50%; transform: translateY(-50%); background: rgba(139, 69, 19, 0.9);
- color: #DAA520; border: 4px solid #2C2C2C; width: 60px; height: 60px; border-radius: 50%;
- cursor: pointer; font-size: 2rem; z-index: 10; display: flex; align-items: center; justify-content: center;
- }
- .carousel-btn:hover { background: rgba(101, 67, 33, 0.95); transform: translateY(-50%) scale(1.1); }
- .carousel-btn.prev { left: 20px; } .carousel-btn.next { right: 20px; }
- .carousel-dots { text-align: center; padding: 25px; background: rgba(139, 69, 19, 0.3); }
- .dot {
- display: inline-block; width: 15px; height: 15px; border-radius: 50%; background: #DEB887;
- margin: 0 8px; cursor: pointer; border: 3px solid #2C2C2C; transition: all 0.3s ease;
- }
- .dot.active { background: #DAA520; transform: scale(1.3); }
- @media (max-width: 768px) {
- .carousel-slide img { height: 400px; }
- .carousel-btn { width: 45px; height: 45px; font-size: 1.5rem; }
- }
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ PILLAR 3: TITLE TAG — 57 chars ═══ -->
+  <title>Photo Gallery | Fort Knox Self Storage Vernal UT</title>
+
+  <!-- ═══ PILLAR 3: META DESCRIPTION — 155 chars ═══ -->
+  <meta name="description" content="See real photos of Fort Knox Self Storage in Vernal, Utah. Steel containers, wide driveways, drive-up access &amp; 24/7 security. Call James: 435-828-7710.">
+
+  <!-- Location Meta -->
+  <meta name="geo.region" content="US-UT">
+  <meta name="geo.placename" content="Vernal">
+  <meta name="geo.position" content="40.4555;-109.5287">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Photo Gallery | Fort Knox Self Storage Vernal UT">
+  <meta property="og:description" content="Real photos of Fort Knox Self Storage in Vernal, Utah — steel containers, wide driveways, drive-up access, and 24/7 security. Call James Richards: 435-828-7710.">
+  <meta property="og:image" content="https://vernalfortknoxselfstorage.com/pictures/fortknox2.webp">
+  <meta property="og:url" content="https://vernalfortknoxselfstorage.com/gallery.html">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://vernalfortknoxselfstorage.com/gallery.html">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- ═══ PILLAR 4: SCHEMA MARKUP ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SelfStorage",
+        "@id": "https://vernalfortknoxselfstorage.com/#business",
+        "name": "Fort Knox Self Storage",
+        "url": "https://vernalfortknoxselfstorage.com",
+        "telephone": "+14358287710",
+        "email": "james.richard500@gmail.com",
+        "image": [
+          "https://vernalfortknoxselfstorage.com/pictures/fortknox2.webp",
+          "https://vernalfortknoxselfstorage.com/pictures/Row40Foot1.webp",
+          "https://vernalfortknoxselfstorage.com/pictures/Container01.webp",
+          "https://vernalfortknoxselfstorage.com/pictures/ContainerDoorAndLocking.webp",
+          "https://vernalfortknoxselfstorage.com/pictures/Deliver02.webp",
+          "https://vernalfortknoxselfstorage.com/pictures/Loading.webp",
+          "https://vernalfortknoxselfstorage.com/pictures/fortknox1.webp"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2225 South 3250 East",
+          "addressLocality": "Vernal",
+          "addressRegion": "UT",
+          "postalCode": "84078",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.4555,
+          "longitude": -109.5287
+        },
+        "priceRange": "$130–$230/month"
+      },
+      {
+        "@type": "ImageGallery",
+        "@id": "https://vernalfortknoxselfstorage.com/gallery.html#gallery",
+        "name": "Fort Knox Self Storage Facility Photos — Vernal, Utah",
+        "description": "Photos of Fort Knox Self Storage in Vernal, Utah showing 40ft steel shipping containers, drive-up access, security locks, and the gated facility.",
+        "url": "https://vernalfortknoxselfstorage.com/gallery.html",
+        "image": [
+          {
+            "@type": "ImageObject",
+            "contentUrl": "https://vernalfortknoxselfstorage.com/pictures/fortknox2.webp",
+            "name": "Fort Knox Self Storage secure facility — Vernal, Utah",
+            "description": "Aerial view of the Fort Knox Self Storage facility in Vernal, Utah"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "https://vernalfortknoxselfstorage.com/pictures/Row40Foot1.webp",
+            "name": "Rows of 40ft storage containers — Fort Knox Vernal UT",
+            "description": "Rows of 40-foot steel storage containers available for rent at Fort Knox Self Storage"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "https://vernalfortknoxselfstorage.com/pictures/Container01.webp",
+            "name": "Steel shipping container exterior — Fort Knox Self Storage",
+            "description": "Close-up of a steel shipping container at Fort Knox Self Storage Vernal Utah"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "https://vernalfortknoxselfstorage.com/pictures/ContainerDoorAndLocking.webp",
+            "name": "High-security steel door and locking system — Fort Knox",
+            "description": "Industrial-strength steel door and locking hardware on a Fort Knox storage container"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "https://vernalfortknoxselfstorage.com/pictures/Deliver02.webp",
+            "name": "Drive-up access at Fort Knox Self Storage Vernal",
+            "description": "Wide gravel driveway with drive-up access to storage containers"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "https://vernalfortknoxselfstorage.com/pictures/Loading.webp",
+            "name": "Loading containers at Fort Knox Self Storage",
+            "description": "Customer loading belongings into a Fort Knox storage container in Vernal, Utah"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "https://vernalfortknoxselfstorage.com/pictures/fortknox1.webp",
+            "name": "Fort Knox Self Storage facility entrance — Vernal UT",
+            "description": "Entrance to the Fort Knox Self Storage facility in Vernal, Utah"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vernalfortknoxselfstorage.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://vernalfortknoxselfstorage.com/gallery.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ─── Page Summary ─── */
+    .page-summary-wrap {
+      background: rgba(218,165,32,0.15);
+      border-left: 5px solid var(--accent-color);
+      padding: 16px 22px;
+      margin: 24px 0 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .page-summary {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--white);
+      margin: 0;
+    }
+    .page-summary a { color: var(--accent-color); text-decoration: underline; }
+    .page-summary-meta {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* ─── Breadcrumb ─── */
+    .breadcrumb {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .breadcrumb a { color: var(--accent-color); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* ─── Feature photo cards ─── */
+    .gallery-section {
+      padding: 70px 0;
+      background: #F5DEB3 url('https://www.transparenttextures.com/patterns/light-wool.png');
+    }
+    .photo-feature {
+      background: #FFF8DC url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+      background-size: 400px;
+      border: 4px solid var(--primary-dark);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 40px;
+    }
+    .photo-feature img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .photo-feature-caption {
+      padding: 28px 32px;
+      border-top: 3px solid var(--accent-color);
+    }
+    .photo-feature-caption h3 {
+      font-family: 'Georgia', serif;
+      font-size: 1.4rem;
+      color: var(--primary-dark);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .photo-feature-caption p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      line-height: 1.7;
+      margin: 0 0 8px;
+    }
+    .photo-feature-caption p:last-child { margin: 0; }
+    .photo-feature-caption strong { color: var(--primary-dark); }
+    .caption-highlights {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .caption-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: var(--primary-dark);
+      color: var(--accent-color);
+      padding: 5px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* ─── Carousel ─── */
+    .carousel-section {
+      padding: 70px 0;
+      background: #E8D5B7 url('https://www.transparenttextures.com/patterns/light-wool.png');
+    }
+    .carousel-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 6px solid var(--primary-dark);
+      border-radius: 6px;
+      box-shadow: 0 10px 40px rgba(44,24,16,0.4);
+      background: #2C2C2C;
+    }
+    .carousel-slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slide { min-width: 100%; position: relative; }
+    .carousel-slide img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      display: block;
+    }
+    .carousel-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(44,24,16,0.92), transparent);
+      color: var(--accent-color);
+      padding: 36px;
+      text-align: center;
+    }
+    .carousel-overlay h3 {
+      font-family: 'Georgia', serif;
+      font-size: 1.7rem;
+      margin-bottom: 6px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .carousel-overlay p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+      margin: 0;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(139,69,19,0.9);
+      color: var(--accent-color);
+      border: 3px solid var(--primary-dark);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .carousel-btn:hover {
+      background: rgba(101,67,33,0.98);
+      transform: translateY(-50%) scale(1.08);
+    }
+    .carousel-btn.prev { left: 16px; }
+    .carousel-btn.next { right: 16px; }
+    .carousel-dots {
+      text-align: center;
+      padding: 20px;
+      background: rgba(139,69,19,0.25);
+    }
+    .dot {
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #DEB887;
+      margin: 0 7px;
+      cursor: pointer;
+      border: 3px solid var(--primary-dark);
+      transition: all 0.3s ease;
+    }
+    .dot.active {
+      background: var(--accent-color);
+      transform: scale(1.3);
+    }
+
+    /* ─── Highlights grid ─── */
+    .highlights-section {
+      padding: 70px 0;
+      background: #F5DEB3 url('https://www.transparenttextures.com/patterns/light-wool.png');
+    }
+
+    /* ─── Tour CTA card ─── */
+    .tour-section {
+      padding: 60px 0;
+      background: #E8D5B7 url('https://www.transparenttextures.com/patterns/light-wool.png');
+    }
+    .tour-card-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      background: #FFF8DC url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+      background-size: 400px;
+      border: 4px solid var(--primary-dark);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .tour-card-header {
+      background: var(--primary-dark);
+      padding: 18px 24px;
+      border-bottom: 3px solid var(--accent-color);
+    }
+    .tour-card-header h2 {
+      font-family: 'Georgia', serif;
+      font-size: 1.3rem;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 0;
+    }
+    .tour-card-body { padding: 28px 24px; text-align: center; }
+    .tour-card-body h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+      margin-bottom: 2px;
+    }
+    .tour-card-body .title {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.82rem;
+      color: var(--accent-color);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .tour-card-body p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+    .contact-item {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Open Sans', sans-serif; font-size: 0.95rem;
+      color: var(--primary-dark); font-weight: 700; text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-item:hover { color: var(--accent-color); }
+
+    @media (max-width: 768px) {
+      .carousel-slide img { height: 320px; }
+      .carousel-btn { width: 40px; height: 40px; font-size: 1.2rem; }
+      .carousel-overlay h3 { font-size: 1.2rem; }
+      .photo-feature-caption { padding: 20px; }
+      .photo-feature-caption h3 { font-size: 1.15rem; }
+    }
+  </style>
+
 </head>
 <body>
- <header class="header">
- <div class="container">
- <div class="header-content">
- <a href="index.html">
- <img src="pictures/fortknoxlogo.webp" alt="Fort Knox Self Storage" class="logo" style="height: 290px; width: auto; position: absolute; top: 10px; left: 150px; z-index: 100;">
- </a>
- <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
- <nav class="nav" id="nav">
- <a href="index.html">Home</a>
- <a href="about.html">About</a>
- <a href="container-sales.html">Container Sales</a>
- <a href="gallery.html" class="active">Gallery</a>
- <a href="parking.html">Auto/RV/Boat Parking</a>
- <a href="reviews.html">Reviews</a>
- </nav>
- </div>
- </div>
- </header>
 
- <section class="hero">
- <div class="container">
- <div class="hero-content">
- <h1 class="hero-title">See Our Facility in Action! 📸</h1>
- <p class="hero-subtitle">Real Photos of Real Storage Solutions</p>
- <div class="hero-cta">
- <a href="tel:435-828-7710" class="btn btn-primary"><span>📞</span> Call: 435-828-7710</a>
- <a href="index.html#contact" class="btn btn-secondary"><span>📍</span> Visit Us Today</a>
- </div>
- </div>
- </div>
- <div class="hero-overlay"></div>
- </section>
+  <!-- ═══ HEADER ═══ -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html">
+          <img src="pictures/fortknoxlogo.webp" alt="Fort Knox Self Storage — Vernal Utah" class="logo">
+        </a>
 
- <section class="features">
- <div class="container">
- <h2 class="section-title">Our Storage Containers & Facilities 🏗️</h2>
- 
- <div class="feature-card" style="margin-bottom: 50px; padding: 0; overflow: hidden;">
- <img src="uhaul-containers.jpg" alt="40ft Storage Containers with U-Haul Trucks" style="width: 100%; height: auto; display: block;">
- <div style="padding: 40px; background: var(--white);">
- <h3 style="font-size: 1.8rem; color: var(--text-dark); margin-bottom: 20px; font-family: 'Montserrat', sans-serif;">
- 40 FT. LONG x 9 FT. HIGH Containers Can Store the GOODS of an Average Full Size Home and Garage.
- </h3>
- <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
- <p style="font-size: 1.3rem; color: var(--primary-color); font-weight: 700; margin: 0;">EASY 24/7 ACCESS for Your Convenience.</p>
- <p style="font-size: 1.3rem; color: var(--primary-color); font-weight: 700; margin: 0;">OWNER/MANAGER Lives ONSITE, Insuring SECURITY!!</p>
- </div>
- </div>
- </div>
-
- <div class="feature-card" style="margin-bottom: 50px; padding: 0; overflow: hidden;">
- <img src="loading-containers.jpg" alt="Wide Driveways and Easy Access" style="width: 100%; height: auto; display: block;">
- <div style="padding: 40px; background: var(--white);">
- <h3 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 15px; font-family: 'Montserrat', sans-serif; font-weight: 700;">WIDE, GRAVELED DRIVEWAYS, EASY 24/7 ACCESS</h3>
- <p style="font-size: 1.5rem; color: var(--primary-color); font-weight: 700; margin: 0;">HIGH SECURITY STEEL DOORS and LOCKS</p>
- <p style="font-size: 1.1rem; color: var(--text-light); margin-top: 20px; line-height: 1.7;">
- Our facility features wide, well-maintained gravel driveways that make loading and unloading a breeze. Pull right up to your container with plenty of room for trucks and trailers!
- </p>
- </div>
- </div>
-
- <div class="feature-card" style="margin-bottom: 50px; padding: 0; overflow: hidden;">
- <img src="container-row.jpg" alt="Rows of Storage Containers" style="width: 100%; height: auto; display: block;">
- <div style="padding: 40px; background: var(--white);">
- <h3 style="font-size: 1.8rem; color: var(--text-dark); margin-bottom: 20px; font-family: 'Montserrat', sans-serif;">40FT. LONG x 9 FT. HIGH Storage Containers For RENT in Our YARD</h3>
- <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
- <p style="font-size: 1.3rem; color: var(--text-dark); font-weight: 600; margin: 0;">Call JAMES RICHARDS, ONSITE Owner/Manager:</p>
- <a href="tel:435-828-7710" style="font-size: 1.4rem; color: var(--primary-color); font-weight: 700; text-decoration: none;">📞 435-828-7710</a>
- </div>
- <p style="font-size: 1.1rem; color: var(--text-light); margin-top: 20px; line-height: 1.7;">
- Rows of secure, weatherproof containers ready for your belongings. Each container is inspected and maintained to ensure your items stay safe and dry!
- </p>
- </div>
- </div>
- </div>
- </section>
-
- <section class="gallery" style="background: var(--light-bg); padding: 80px 0;">
- <div class="container">
- <h2 class="section-title">More Views of Our Facility 🏢</h2>
- 
- <div class="carousel-container">
- <div class="carousel-slides" id="slides">
- <div class="carousel-slide"><img src="pictures/fortknox2.webp" alt="Fort Knox Facility"><div class="carousel-overlay"><h3>⭐ Secure Facility</h3><p>Professional storage you can trust</p></div></div>
- <div class="carousel-slide"><img src="pictures/Row40Foot1.webp" alt="Rows of Containers"><div class="carousel-overlay"><h3>🏗️ 40ft Containers</h3><p>Plenty of space for storage</p></div></div>
- <div class="carousel-slide"><img src="pictures/Container01.webp" alt="Container Exterior"><div class="carousel-overlay"><h3>✨ Steel Construction</h3><p>Built to protect your belongings</p></div></div>
- <div class="carousel-slide"><img src="pictures/ContainerDoorAndLocking.webp" alt="Security"><div class="carousel-overlay"><h3>🔒 Security Locks</h3><p>Industrial-strength protection</p></div></div>
- <div class="carousel-slide"><img src="pictures/Deliver02.webp" alt="Easy Access"><div class="carousel-overlay"><h3>🚗 Drive-Up Access</h3><p>Easy loading and unloading</p></div></div>
- <div class="carousel-slide"><img src="pictures/Loading.webp" alt="Loading"><div class="carousel-overlay"><h3>📦 Loading Process</h3><p>Pull right up to your unit</p></div></div>
- <div class="carousel-slide"><img src="pictures/fortknox1.webp" alt="Facility"><div class="carousel-overlay"><h3>🏢 Professional</h3><p>Well-maintained facility</p></div></div>
- </div>
- <button class="carousel-btn prev" onclick="move(-1)">❮</button>
- <button class="carousel-btn next" onclick="move(1)">❯</button>
- </div>
- <div class="carousel-dots" id="dots"></div>
- </div>
- </section>
-
- <section class="features">
- <div class="container">
- <h2 class="section-title">What Makes Our Containers Special? ⭐</h2>
- <div class="features-grid">
- <div class="feature-card"><div class="feature-icon">📏</div><h3>Huge Capacity</h3><p>40 ft. long x 9 ft. high containers can store an entire home's worth of belongings plus garage items!</p></div>
- <div class="feature-card"><div class="feature-icon">🔒</div><h3>High Security Steel</h3><p>Heavy-duty steel doors with industrial locks keep your valuables completely secure</p></div>
- <div class="feature-card"><div class="feature-icon">🚗</div><h3>Drive-Up Access</h3><p>Wide gravel driveways mean you can back your truck or trailer right up to your container</p></div>
- <div class="feature-card"><div class="feature-icon">⏰</div><h3>24/7 Access</h3><p>Access your belongings any time of day or night - we never close!</p></div>
- <div class="feature-card"><div class="feature-icon">🏠</div><h3>Onsite Manager</h3><p>James lives right on the property, ensuring maximum security and quick assistance</p></div>
- <div class="feature-card"><div class="feature-icon">☔</div><h3>Weather Resistant</h3><p>Steel construction keeps your items dry and protected from the elements</p></div>
- </div>
- </div>
- </section>
-
- <section class="contact-card">
- <div class="container">
- <div class="card">
- <div class="card-header"><h2>📹 Want a Personal Tour?</h2></div>
- <div class="card-body">
- <p style="font-size: 1.3rem; margin-bottom: 20px; color: var(--text-dark); line-height: 1.8;">
- Pictures are great, but seeing it in person is even better! Come visit our facility and James will show you around personally.
- </p>
- <p style="font-size: 1.1rem; margin-bottom: 35px; color: var(--text-light);">
- We're proud of what we've built here, and we'd love to show you why Fort Knox Self Storage is the best choice for your storage needs.
- </p>
- <h3>James Richards</h3>
- <p class="title">Owner/Manager - Living Onsite for Your Security</p>
- <div class="contact-info">
- <a href="tel:435-828-7710" class="contact-item"><span class="icon">📱</span><span>435-828-7710</span></a>
- <a href="mailto:james.richard500@gmail.com" class="contact-item"><span class="icon">📧</span><span>james.richard500@gmail.com</span></a>
- </div>
- <div style="margin-top: 30px;">
- <a href="tel:435-828-7710" class="btn btn-primary" style="font-size: 1.2rem; padding: 18px 40px;">📞 Schedule Your Tour Today!</a>
- </div>
- </div>
- </div>
- </div>
- </section>
-
- <!-- Footer -->
- <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                
-                <div class="footer-section">
-                    <h3>Fort Knox Self Storage</h3>
-                    <p>Your LOCAL source for shipping containers and secure storage serving the Uintah Basin! 📦🏔️</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>James Richards, Owner/Manager<br>
-                    📞 <a href="tel:435-828-7710" style="color: inherit;">435-828-7710</a><br>
-                    📧 <a href="mailto:james.richard500@gmail.com" style="color: inherit;">james.richard500@gmail.com</a><br>
-                    <strong style="color: var(--accent-color);">Serving the Uintah Basin Area</strong></p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Our Family Owened Storage Locations</h3>
-                    <p style="margin-bottom: 10px; font-size: 0.9em;">Visit our partner locations:</p>
-                    <a href="https://www.ashleyvalleystorage.com/" target="_blank">Ashley Valley Self Storage</a>
-                    <a href="https://www.naples-storage.com/" target="_blank">Naples Self Storage</a>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Fort Knox Self Storage. All rights reserved. Buy local! 🏔️</p>
-                
-                <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
-
-                <p style="margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                    Powered by cozelosdata.com
-                    <a href="https://cozelosdata.com" target="_blank" style="text-decoration: none;">
-                        <img src="pictures/cozeloslogo.webp" alt="Cozelos Data" style="height: 30px; width: auto; vertical-align: middle;">
-                    </a>
-                </p>
-            </div>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span><span></span><span></span>
         </div>
-    </footer>
 
- <script>
- const menuToggle = document.getElementById('menuToggle');
- const nav = document.getElementById('nav');
- if (menuToggle && nav) {
- menuToggle.addEventListener('click', function() { nav.classList.toggle('active'); this.classList.toggle('active'); });
- const navLinks = nav.querySelectorAll('a');
- navLinks.forEach(link => { link.addEventListener('click', () => { nav.classList.remove('active'); menuToggle.classList.remove('active'); }); });
- document.addEventListener('click', function(event) {
- const isClickInsideNav = nav.contains(event.target);
- const isClickOnToggle = menuToggle.contains(event.target);
- if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) { nav.classList.remove('active'); menuToggle.classList.remove('active'); }
- });
- }
+        <nav class="nav" id="nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="container-sales.html">Container Sales</a>
+          <a href="gallery.html" class="active">Gallery</a>
+          <a href="parking.html">Auto/RV/Boat Parking</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
- let index = 0;
- const container = document.getElementById('slides');
- const dotContainer = document.getElementById('dots');
- const total = 7;
- 
- for (let i = 0; i < total; i++) {
- const d = document.createElement('span');
- d.className = 'dot';
- d.onclick = () => show(i);
- dotContainer.appendChild(d);
- }
- 
- function show(n) {
- if (n >= total) index = 0;
- else if (n < 0) index = total - 1;
- else index = n;
- container.style.transform = 'translateX(-' + (index * 100) + '%)';
- const dots = document.querySelectorAll('.dot');
- dots.forEach((d, i) => d.className = i === index ? 'dot active' : 'dot');
- }
- 
- function move(dir) { show(index + dir); }
- show(0);
- setInterval(() => move(1), 5000);
- </script>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" aria-label="Gallery page header">
+    <div class="container">
+      <div class="hero-content">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>Photo Gallery</span>
+        </nav>
+
+        <!-- PILLAR 3: H1 — one per page, includes primary keyword -->
+        <h1 class="hero-title">Fort Knox Self Storage<br>
+          <span style="font-size: 1.3rem; font-weight: 400; text-transform: none; font-style: italic; letter-spacing: 1px;">Facility Photos — Vernal, Utah</span>
+        </h1>
+        <p class="hero-subtitle">Steel Containers · Drive-Up Access · 24/7 Security</p>
+
+        <!-- PILLAR 3: PAGE SUMMARY BLOCK -->
+        <div class="page-summary-wrap" role="note" aria-label="Gallery summary">
+          <p class="page-summary">
+            Real photos of <strong>Fort Knox Self Storage</strong> in <strong>Vernal, Utah</strong>.
+            See our 20ft and 40ft steel shipping containers, wide gravel driveways, high-security locks, and the full gated facility at
+            <strong>2225 South 3250 East, Vernal UT 84078</strong>.
+            Call <a href="tel:4358287710">James at 435-828-7710</a> to schedule a personal tour.
+          </p>
+          <span class="page-summary-meta">Last updated: <time datetime="2026-02-01">February 2026</time></span>
+        </div>
+
+        <div class="hero-cta" style="margin-top: 24px;">
+          <a href="tel:4358287710" class="btn btn-primary" style="font-family: 'Montserrat', sans-serif;">
+            <span>📞</span> 435-828-7710
+          </a>
+          <a href="index.html#contact" class="btn btn-secondary" style="font-family: 'Montserrat', sans-serif;">
+            <span>📍</span> Visit Us
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+
+  <!-- ═══ FEATURED PHOTOS — descriptive alt text for each ═══ -->
+  <section class="gallery-section" aria-labelledby="gallery-heading">
+    <div class="container">
+      <h2 id="gallery-heading" class="section-title">Our Facility &amp; Containers</h2>
+
+      <!-- Photo 1 -->
+      <div class="photo-feature">
+        <img
+          src="uhaul-containers.jpg"
+          alt="40ft steel storage containers with vehicles at Fort Knox Self Storage, Vernal Utah — 24/7 drive-up access"
+          loading="lazy"
+          width="1200" height="675"
+        >
+        <div class="photo-feature-caption">
+          <h3>40ft Containers — Fits a Full Home &amp; Garage</h3>
+          <p>Our <strong>40ft long × 9ft high steel containers</strong> provide enough space to store the entire contents of an average full-size home plus garage. Pull your truck or trailer right up to the door — <strong>24/7, any day of the year</strong>.</p>
+          <div class="caption-highlights">
+            <span class="caption-tag">40ft × 9ft High</span>
+            <span class="caption-tag">Drive-Up Access</span>
+            <span class="caption-tag">24/7</span>
+            <span class="caption-tag">Mouse-Proof Steel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="photo-feature">
+        <img
+          src="loading-containers.jpg"
+          alt="Wide graveled driveway at Fort Knox Self Storage Vernal — easy loading and unloading access for trucks and trailers"
+          loading="lazy"
+          width="1200" height="675"
+        >
+        <div class="photo-feature-caption">
+          <h3>Wide Gravel Driveways — Easy Loading &amp; Unloading</h3>
+          <p>Our <strong>wide, well-maintained gravel driveways</strong> give you room to back in a full-size truck or trailer with ease. <strong>High-security steel doors and locks</strong> on every container — your belongings stay protected and private.</p>
+          <div class="caption-highlights">
+            <span class="caption-tag">Wide Driveways</span>
+            <span class="caption-tag">Truck &amp; Trailer Access</span>
+            <span class="caption-tag">Steel Doors &amp; Locks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="photo-feature">
+        <img
+          src="container-row.jpg"
+          alt="Rows of 40ft storage containers for rent at Fort Knox Self Storage — Vernal Utah Uintah Basin"
+          loading="lazy"
+          width="1200" height="675"
+        >
+        <div class="photo-feature-caption">
+          <h3>Rows of Containers Ready to Rent</h3>
+          <p>Multiple 40ft containers available for <strong>rent or purchase</strong> right here in the Uintah Basin. Each unit is inspected and maintained to keep your belongings safe, dry, and pest-free.</p>
+          <p>Call <strong>James Richards</strong> directly: <a href="tel:4358287710" style="color: var(--primary-dark); font-weight: bold;">435-828-7710</a> — same-day move-in usually available.</p>
+          <div class="caption-highlights">
+            <span class="caption-tag">Rent or Buy</span>
+            <span class="caption-tag">Vernal, UT</span>
+            <span class="caption-tag">Same-Day Move-In</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ SLIDESHOW CAROUSEL ═══ -->
+  <section class="carousel-section" aria-labelledby="carousel-heading">
+    <div class="container">
+      <h2 id="carousel-heading" class="section-title">More Views of the Facility</h2>
+
+      <div class="carousel-container" role="region" aria-label="Fort Knox facility photo slideshow">
+
+        <div class="carousel-slides" id="slides">
+
+          <div class="carousel-slide">
+            <img src="pictures/fortknox2.webp"
+                 alt="Fort Knox Self Storage facility aerial view — Vernal, Utah"
+                 loading="lazy" width="1000" height="560">
+            <div class="carousel-overlay">
+              <h3>Secure Gated Facility</h3>
+              <p>Personal access codes · every customer's entry is private</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="pictures/Row40Foot1.webp"
+                 alt="Rows of 40-foot steel shipping containers at Fort Knox Self Storage, Vernal Utah"
+                 loading="lazy" width="1000" height="560">
+            <div class="carousel-overlay">
+              <h3>40ft Containers — Best Seller</h3>
+              <p>~320 sq ft of secure, mouse-proof storage space</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="pictures/Container01.webp"
+                 alt="Steel shipping container exterior at Fort Knox Self Storage — Vernal Utah"
+                 loading="lazy" width="1000" height="560">
+            <div class="carousel-overlay">
+              <h3>All-Steel Construction</h3>
+              <p>Mouse-proof, fireproof, insect-proof — built to last 25+ years</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="pictures/ContainerDoorAndLocking.webp"
+                 alt="Industrial-strength steel door and locking mechanism on a Fort Knox storage container"
+                 loading="lazy" width="1000" height="560">
+            <div class="carousel-overlay">
+              <h3>High-Security Locks</h3>
+              <p>Industrial steel doors — your belongings stay where you leave them</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="pictures/Deliver02.webp"
+                 alt="Drive-up access at Fort Knox Self Storage — wide driveway for trucks and trailers, Vernal Utah"
+                 loading="lazy" width="1000" height="560">
+            <div class="carousel-overlay">
+              <h3>Drive-Up Access</h3>
+              <p>Wide gravel driveways · back your truck right to the door</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="pictures/Loading.webp"
+                 alt="Customer loading belongings into a steel shipping container at Fort Knox Self Storage Vernal"
+                 loading="lazy" width="1000" height="560">
+            <div class="carousel-overlay">
+              <h3>Easy Loading</h3>
+              <p>Pull right up and load at your own pace — 24 hours a day</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="pictures/fortknox1.webp"
+                 alt="Entrance to Fort Knox Self Storage — 2225 South 3250 East, Vernal Utah 84078"
+                 loading="lazy" width="1000" height="560">
+            <div class="carousel-overlay">
+              <h3>Fort Knox Self Storage — Vernal, UT</h3>
+              <p>2225 South 3250 East · Call James: 435-828-7710</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-btn prev" id="prevSlide" aria-label="Previous photo">&#10094;</button>
+        <button class="carousel-btn next" id="nextSlide" aria-label="Next photo">&#10095;</button>
+      </div>
+
+      <div class="carousel-dots" id="dots" role="tablist" aria-label="Slide navigation"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FEATURE HIGHLIGHTS ═══ -->
+  <section class="highlights-section" aria-labelledby="highlights-heading">
+    <div class="container">
+      <h2 id="highlights-heading" class="section-title">What You See Is What You Get</h2>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">📏</div>
+          <h3>Huge Capacity</h3>
+          <p>40ft × 9ft containers hold an entire home's worth of belongings plus garage items. 20ft units available for smaller needs.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>High-Security Steel Doors</h3>
+          <p>Industrial-strength steel doors with heavy-duty locks. Each container is sealed — no gaps, no entry points for pests or intruders.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🚗</div>
+          <h3>Drive-Up Access</h3>
+          <p>Wide gravel driveways mean you can back your pickup, trailer, or moving truck right up to the door — no narrow lanes or tight turns.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🕐</div>
+          <h3>24/7 Access</h3>
+          <p>Your personal gate code works any hour, any day of the year. There are no restricted hours — get your belongings whenever you need them.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🐭</div>
+          <h3>Mouse-Proof Steel</h3>
+          <p>All-steel sealed containers — no wood framing, no gaps, no rodents. A real advantage over traditional stick-built storage units in Vernal.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">☔</div>
+          <h3>Weather-Resistant</h3>
+          <p>Built for ocean shipping — handles Uintah Basin heat, cold, wind, and snow without issue. Your items stay dry and clean.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TOUR CTA ═══ -->
+  <section class="tour-section" aria-labelledby="tour-heading">
+    <div class="container">
+      <div class="tour-card-inner">
+        <div class="tour-card-header">
+          <h2 id="tour-heading">Want a Personal Tour?</h2>
+        </div>
+        <div class="tour-card-body">
+          <h3>James Richards</h3>
+          <span class="title">Owner &amp; Manager — Fort Knox Self Storage</span>
+          <p>Photos are great, but seeing it in person is even better. Call James and he'll show you around personally — walk the lot, inspect a container, and get an honest answer to every question.</p>
+          <p style="font-size: 0.9rem; color: var(--text-light);">
+            <strong>2225 South 3250 East, Vernal, Utah 84078</strong> · Call ahead so James can meet you.
+          </p>
+          <div class="contact-info">
+            <a href="tel:4358287710" class="contact-item">
+              <span>📱</span><span>435-828-7710</span>
+            </a>
+            <a href="mailto:james.richard500@gmail.com" class="contact-item">
+              <span>📧</span><span>james.richard500@gmail.com</span>
+            </a>
+          </div>
+          <div style="margin-top: 28px;">
+            <a href="tel:4358287710" class="btn btn-primary"
+               style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem; animation: buttonFlash 1.5s ease-in-out infinite;">
+              📞 Call to Schedule a Tour
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ RELATED ═══ -->
+  <section class="related" aria-labelledby="related-heading">
+    <div class="container">
+      <h2 id="related-heading" class="section-title">More About Fort Knox</h2>
+      <div class="related-grid">
+        <a href="index.html" class="related-card">
+          <h3>📦 Storage Unit Rentals</h3>
+          <p>Mouse-proof 20ft and 40ft containers from $130/month. First 2 months FREE with 6-month contract.</p>
+        </a>
+        <a href="reviews.html" class="related-card">
+          <h3>⭐ Customer Reviews</h3>
+          <p>Rated 4.9/5 stars by Uintah Basin customers. See what your neighbors say about Fort Knox.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER — exact NAP match ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+
+        <div class="footer-section">
+          <h3>Fort Knox Self Storage</h3>
+          <p>Your LOCAL source for shipping containers and secure storage serving the Uintah Basin! 📦🏔️</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <address style="font-style: normal;">
+            James Richards, Owner/Manager<br>
+            📞 <a href="tel:4358287710" style="color: inherit;">435-828-7710</a><br>
+            📧 <a href="mailto:james.richard500@gmail.com" style="color: inherit;">james.richard500@gmail.com</a><br>
+            2225 South 3250 East, Vernal, Utah 84078<br>
+            <strong style="color: var(--accent-color);">Serving the Uintah Basin Area</strong>
+          </address>
+        </div>
+
+        <div class="footer-section">
+          <!-- Fixed: "Owened" → "Owned" -->
+          <h3>Our Family Owned Storage Locations</h3>
+          <p style="margin-bottom: 10px; font-size: 0.9em;">Visit our partner locations:</p>
+          <a href="https://www.ashleyvalleystorage.com/" target="_blank" rel="noopener">Ashley Valley Self Storage</a>
+          <a href="https://www.naples-storage.com/" target="_blank" rel="noopener">Naples Self Storage</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Fort Knox Self Storage. All rights reserved. Buy local! 🏔️</p>
+        <p style="margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          Powered by cozelosdata.com
+          <a href="https://cozelosdata.com" target="_blank" rel="noopener" style="text-decoration: none;">
+            <img src="pictures/cozeloslogo.webp" alt="Cozelos Data" style="height: 30px; width: auto; vertical-align: middle;" loading="lazy">
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+    // ─── Mobile nav ───
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        this.classList.toggle('active');
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
+      });
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !menuToggle.contains(e.target) && nav.classList.contains('active')) {
+          nav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        }
+      });
+    }
+
+    // ─── Carousel — no inline onclick ───
+    let slideIndex = 0;
+    const slidesEl = document.getElementById('slides');
+    const dotContainer = document.getElementById('dots');
+    const total = 7;
+
+    // Build dots
+    for (let i = 0; i < total; i++) {
+      const d = document.createElement('span');
+      d.className = 'dot';
+      d.setAttribute('role', 'tab');
+      d.setAttribute('aria-label', 'Slide ' + (i + 1));
+      d.addEventListener('click', () => showSlide(i));
+      dotContainer.appendChild(d);
+    }
+
+    function showSlide(n) {
+      if (n >= total) slideIndex = 0;
+      else if (n < 0) slideIndex = total - 1;
+      else slideIndex = n;
+      slidesEl.style.transform = 'translateX(-' + (slideIndex * 100) + '%)';
+      document.querySelectorAll('.dot').forEach((d, i) => {
+        d.className = i === slideIndex ? 'dot active' : 'dot';
+        d.setAttribute('aria-selected', i === slideIndex ? 'true' : 'false');
+      });
+    }
+
+    document.getElementById('prevSlide').addEventListener('click', () => showSlide(slideIndex - 1));
+    document.getElementById('nextSlide').addEventListener('click', () => showSlide(slideIndex + 1));
+
+    showSlide(0);
+    setInterval(() => showSlide(slideIndex + 1), 5000);
+  </script>
+
 </body>
 </html>
