@@ -367,6 +367,80 @@
     @media (max-width: 400px) {
       .values-grid { grid-template-columns: 1fr; }
     }
+
+    /* ═══ REVIEW BADGE — shimmer pill shown below call buttons ═══ */
+    .review-nudge {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      background: #ffffff;
+      border: 3px solid #DAA520;
+      border-radius: 50px;
+      padding: 10px 20px 10px 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25), 0 2px 0 rgba(218,165,32,0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      width: 100%;
+      max-width: 340px;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .review-nudge::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
+      animation: reviewShine 2.8s infinite;
+    }
+    @keyframes reviewShine {
+      0%        { left: -100%; }
+      40%, 100% { left: 140%; }
+    }
+    .review-nudge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 2px 0 rgba(218,165,32,0.7);
+      background: #fffde7;
+    }
+    .review-nudge:active { transform: translateY(0); }
+    .review-g {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: conic-gradient(#4285F4 0deg 90deg, #EA4335 90deg 180deg, #FBBC05 180deg 270deg, #34A853 270deg 360deg);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Arial Black', sans-serif;
+      font-size: 1rem; font-weight: 900;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+      flex-shrink: 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    .review-nudge-text {
+      display: flex; flex-direction: column;
+      align-items: flex-start; gap: 1px;
+      flex: 1;
+    }
+    .review-nudge-top {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem; font-weight: 800;
+      color: #222;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
+    .review-nudge-stars { font-size: 0.95rem; color: #F4B400; letter-spacing: 2px; line-height: 1; }
+    .review-nudge-sub {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.7rem; color: #777;
+      line-height: 1.3; margin-top: 1px;
+    }
+    .review-nudge-arrow {
+      font-size: 1.2rem; color: #DAA520;
+      font-weight: 900; flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .review-nudge:hover .review-nudge-arrow { transform: translateX(4px); }
   </style>
 
 </head>
@@ -541,6 +615,21 @@
             <a href="tel:4358287710" class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; padding: 14px 28px;">
               📞 435-828-7710
             </a>
+            <!-- ★ REVIEW BADGE ★ -->
+            <div style="margin-top: 14px; display: flex; justify-content: center;">
+              <a href="https://www.google.com/maps?cid=12789026406975244841&action=write-review"
+                 target="_blank" rel="noopener"
+                 class="review-nudge"
+                 aria-label="Leave a Google review for Fort Knox Self Storage">
+                <div class="review-g">G</div>
+                <div class="review-nudge-text">
+                  <span class="review-nudge-top">Already a Customer?</span>
+                  <span class="review-nudge-stars">★★★★★</span>
+                  <span class="review-nudge-sub">Leave a Google review — it only takes a minute</span>
+                </div>
+                <span class="review-nudge-arrow">›</span>
+              </a>
+            </div>
           </div>
 
         </div>
@@ -598,6 +687,21 @@
         </a>
         <a href="index.html#units" class="btn btn-secondary" style="font-family: 'Montserrat', sans-serif;">
           View Storage Units
+        </a>
+      </div>
+      <!-- ★ REVIEW BADGE ★ -->
+      <div style="margin-top: 20px; display: flex; justify-content: center;">
+        <a href="https://www.google.com/maps?cid=12789026406975244841&action=write-review"
+           target="_blank" rel="noopener"
+           class="review-nudge"
+           aria-label="Leave a Google review for Fort Knox Self Storage">
+          <div class="review-g">G</div>
+          <div class="review-nudge-text">
+            <span class="review-nudge-top">Happy Customer? Leave a Review</span>
+            <span class="review-nudge-stars">★★★★★</span>
+            <span class="review-nudge-sub">Takes 60 seconds · Helps the community</span>
+          </div>
+          <span class="review-nudge-arrow">›</span>
         </a>
       </div>
     </div>
