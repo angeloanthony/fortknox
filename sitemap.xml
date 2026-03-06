@@ -17,7 +17,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- FAQ — new standalone SEO page -->
+  <!-- FAQ — standalone SEO page -->
   <url>
     <loc>https://vernalfortknoxselfstorage.com/faq.html</loc>
     <lastmod>2026-02-01</lastmod>
@@ -62,7 +62,7 @@
     <loc>https://vernalfortknoxselfstorage.com/gallery.html</loc>
     <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <!-- 20ft Container Rental -->
@@ -105,9 +105,57 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Oilfield Storage — NEW -->
+  <!-- Oilfield Storage -->
   <url>
     <loc>https://vernalfortknoxselfstorage.com/oilfield-storage.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Business Storage -->
+  <url>
+    <loc>https://vernalfortknoxselfstorage.com/business-storage.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Jensen, UT Storage -->
+  <url>
+    <loc>https://vernalfortknoxselfstorage.com/storage-jensen-utah.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Naples, UT Storage -->
+  <url>
+    <loc>https://vernalfortknoxselfstorage.com/storage-naples-utah.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Roosevelt, UT Storage -->
+  <url>
+    <loc>https://vernalfortknoxselfstorage.com/storage-roosevelt-utah.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Maeser, UT Storage -->
+  <url>
+    <loc>https://vernalfortknoxselfstorage.com/storage-maeser-utah.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Vernal Storage Comparison -->
+  <url>
+    <loc>https://vernalfortknoxselfstorage.com/storage-vernal-comparison.html</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
