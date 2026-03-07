@@ -82,24 +82,93 @@
             "@type": "Offer",
             "name": "20ft Steel Shipping Container",
             "description": "20-foot steel shipping container. 20ft × 8ft × 9ft (~160 sq ft). Mouse-proof, fireproof. Delivery and setup included in Uintah Basin.",
+            "url": "https://vernalfortknoxselfstorage.com/container-sales.html",
             "priceCurrency": "USD",
             "price": "4000",
             "priceValidUntil": "2026-12-31",
             "availability": "https://schema.org/InStock",
             "itemCondition": "https://schema.org/UsedCondition",
             "seller": { "@id": "https://vernalfortknoxselfstorage.com/#business" },
-            "areaServed": { "@type": "AdministrativeArea", "name": "Uintah Basin, Utah" }
+            "areaServed": { "@type": "AdministrativeArea", "name": "Uintah Basin, Utah" },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "USD"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressRegion": "UT",
+                "addressCountry": "US"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": "1",
+                  "maxValue": "7",
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": "0",
+                  "maxValue": "1",
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "US",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
           },
           {
             "@type": "Offer",
             "name": "40ft Steel Shipping Container",
             "description": "40-foot steel shipping container. 40ft × 8ft × 9ft (~320 sq ft). Mouse-proof, fireproof. Delivery and setup included in Uintah Basin.",
+            "url": "https://vernalfortknoxselfstorage.com/container-sales.html",
             "priceCurrency": "USD",
             "price": "7500",
             "priceValidUntil": "2026-12-31",
             "availability": "https://schema.org/InStock",
             "itemCondition": "https://schema.org/UsedCondition",
-            "seller": { "@id": "https://vernalfortknoxselfstorage.com/#business" }
+            "seller": { "@id": "https://vernalfortknoxselfstorage.com/#business" },
+            "areaServed": { "@type": "AdministrativeArea", "name": "Uintah Basin, Utah" },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "USD"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressRegion": "UT",
+                "addressCountry": "US"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": "1",
+                  "maxValue": "7",
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": "0",
+                  "maxValue": "1",
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "US",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
           }
         ]
       },
