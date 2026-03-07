@@ -2922,3 +2922,371 @@ a {
   .recreation-grid  { grid-template-columns: 1fr; }
   .rv-features-grid { grid-template-columns: 1fr; }
 }
+
+/* ════════════════════════════════════════════════════
+   APPEND THIS BLOCK TO THE BOTTOM OF styles.css
+   Then remove the <style> block from container-sales.html
+════════════════════════════════════════════════════ */
+
+
+/* ===================================
+   CONTAINER SALES PAGE
+   container-sales.html
+   =================================== */
+
+/* ═══ Breadcrumb (inline — not .breadcrumb-bar) ═══ */
+.breadcrumb {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.breadcrumb a { color: var(--accent-color); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb span { margin: 0 6px; }
+
+/* ═══ Container Size Cards ═══ */
+.size-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+.size-card {
+  background: #FFF8DC url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-size: 400px;
+  border: 4px solid var(--primary-dark);
+  border-top: 6px solid var(--accent-color);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.size-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.size-card.bestseller { border-top-color: #2E7D32; }
+.size-card-header {
+  background: var(--primary-dark);
+  padding: 16px 20px;
+  position: relative;
+}
+.size-card-header h3 {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.bestseller-badge {
+  display: inline-block;
+  background: #2E7D32;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+.size-card-body { padding: 20px; }
+.size-specs {
+  background: rgba(222,184,135,0.3);
+  border: 1px solid rgba(101,67,33,0.2);
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+.size-specs p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  margin: 4px 0;
+  line-height: 1.5;
+}
+.size-specs strong { color: var(--primary-dark); }
+.sqft {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-top: 8px;
+}
+.size-card-body > p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  line-height: 1.65;
+  margin: 0 0 14px;
+}
+
+/* ═══ Price Tag on Size Cards ═══ */
+.price-tag {
+  display: inline-block;
+  background: var(--primary-dark);
+  color: var(--accent-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin: 10px 0 14px;
+  letter-spacing: 0.5px;
+}
+.price-note {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin: -8px 0 12px;
+}
+
+/* ═══ Container Condition Cards ═══ */
+.condition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.condition-card {
+  background: #FFF8DC url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-size: 400px;
+  border: 3px solid var(--primary-dark);
+  border-radius: 6px;
+  padding: 24px 20px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.condition-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+}
+.condition-icon {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  display: block;
+}
+.condition-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.condition-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.87rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+.best-for {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  border-top: 1px solid rgba(101,67,33,0.2);
+  padding-top: 8px;
+  margin-top: 8px;
+}
+.best-for strong { color: var(--primary-dark); }
+
+/* ═══ How-to-Rent Steps List ═══ */
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 860px;
+}
+.steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #FFF8DC url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-size: 400px;
+  border: 3px solid var(--primary-dark);
+  border-left: 6px solid var(--accent-color);
+  border-radius: 0 6px 6px 0;
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.step-num {
+  font-family: 'Georgia', serif;
+  font-size: 2.2rem;
+  color: var(--accent-color);
+  flex-shrink: 0;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.step-content h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+/* ═══ Comparison Table ═══ */
+.table-wrap { overflow-x: auto; margin-top: 16px; }
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.92rem;
+}
+.compare-table thead {
+  background: var(--primary-dark);
+  color: var(--white);
+}
+.compare-table thead th { padding: 13px 16px; text-align: left; }
+.compare-table tbody tr:nth-child(even) { background: rgba(222,184,135,0.3); }
+.compare-table tbody td {
+  padding: 11px 16px;
+  border-bottom: 1px solid rgba(101,67,33,0.15);
+  vertical-align: middle;
+}
+.yes { color: #2E7D32; font-weight: bold; }
+.no  { color: #C62828; }
+
+/* ═══ FAQ Accordion (details/summary style) ═══ */
+.faq-accordion details {
+  background: #FFF8DC url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-size: 400px;
+  border: 3px solid var(--primary-dark);
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+}
+.faq-accordion details[open] { border-color: var(--accent-color); }
+.faq-accordion summary {
+  padding: 17px 54px 17px 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  list-style: none;
+  position: relative;
+  line-height: 1.4;
+}
+.faq-accordion summary::-webkit-details-marker { display: none; }
+.faq-accordion summary::after {
+  content: '+';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: var(--accent-color);
+  color: var(--primary-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.faq-accordion details[open] summary::after {
+  content: '−';
+  background: var(--primary-dark);
+  color: var(--accent-color);
+}
+.faq-answer {
+  padding: 16px 20px 20px;
+  border-top: 2px dashed rgba(101,67,33,0.25);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+.faq-answer p { margin-bottom: 8px; }
+.faq-answer p:last-child { margin: 0; }
+.faq-answer a { color: var(--primary-dark); font-weight: 700; text-decoration: underline; }
+.faq-answer strong { color: var(--primary-dark); }
+.faq-answer .answer-cta {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--accent-color);
+  color: var(--primary-dark);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 2px solid var(--primary-dark);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.faq-answer .answer-cta:hover {
+  background: var(--primary-dark);
+  color: var(--accent-color);
+}
+
+/* ═══ CTA Block (wood-panel style, distinct from .cta-strip) ═══ */
+.cta-block {
+  background: #CD853F url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-size: 350px;
+  border: 6px solid var(--primary-dark);
+  border-radius: 8px;
+  padding: 40px 36px;
+  text-align: center;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.2), var(--shadow-md);
+}
+.cta-block h2 {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  color: var(--metal-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 3px rgba(218,165,32,0.5);
+}
+.cta-block p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--metal-dark);
+  margin-bottom: 24px;
+  line-height: 1.65;
+}
+.cta-block .btn { animation: buttonFlash 1.5s ease-in-out infinite; }
+.cta-block .btn:hover { animation: none; }
+
+/* ═══ Area Tags ═══ */
+.area-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.area-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--primary-dark);
+  color: var(--accent-color);
+  padding: 7px 16px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ═══ Responsive — Container Sales Page ═══ */
+@media (max-width: 768px) {
+  .size-grid      { grid-template-columns: 1fr; }
+  .condition-grid { grid-template-columns: 1fr 1fr; }
+  .cta-block      { padding: 28px 20px; }
+  .cta-block h2   { font-size: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .condition-grid { grid-template-columns: 1fr; }
+}
