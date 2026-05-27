@@ -3290,3 +3290,129 @@ a {
 @media (max-width: 480px) {
   .condition-grid { grid-template-columns: 1fr; }
 }
+
+/* ===================================
+   CONTAINER SALES PAGE — IMAGE UTILITIES
+   container-sales.html
+   Append this block to the bottom of styles.css
+   =================================== */
+
+/* ── Framed image wrapper (border + shadow matching site standard) ── */
+.img-framed {
+  border: 5px solid var(--primary-dark);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: block;
+}
+.img-framed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── 3-up photo strip ── */
+.photo-strip-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 960px;
+  margin: 32px auto 0;
+}
+.photo-strip-3 .img-framed {
+  height: 210px;
+}
+
+/* ── Two-column: image left, text right (or reversed) ── */
+.two-col-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.two-col-media .img-framed {
+  height: 320px;
+}
+
+/* ── Inline step image (inside .step-content) ── */
+.step-img {
+  width: 100%;
+  max-width: 360px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
+/* ── Meet James: portrait + text two-column ── */
+.owner-media-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.owner-media-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+  border: 4px solid var(--primary-dark);
+  display: block;
+}
+
+/* ── Hero photo row (3 images below CTA) ── */
+.hero-photo-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+.hero-photo-row img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  display: block;
+}
+
+/* ── CTA section owner portrait ── */
+.cta-owner-photo {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  margin: 0 auto 18px;
+  display: block;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .two-col-media {
+    grid-template-columns: 1fr !important;
+  }
+  .two-col-media .img-framed {
+    height: 220px;
+  }
+  .photo-strip-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .owner-media-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-photo-row {
+    grid-template-columns: 1fr !important;
+  }
+  .step-img {
+    max-width: 100%;
+  }
+}
